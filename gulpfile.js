@@ -17,7 +17,8 @@ var
    gutil        = require('gulp-util'),                    // Различные вспомогательные утилиты
    cssImport    = require('gulp-cssimport'),               // Работа @import
 	path         = require('path'),                         // Для работы с путями
-	strip        = require('gulp-strip-css-comments')       // Убирает комментарии
+	strip        = require('gulp-strip-css-comments'),      // Убирает комментарии
+	pug          = require('gulp-pug')                      // Шаблонизатор Pug (бывший Jade)
 ;
 /* ================================ */
 
@@ -56,11 +57,13 @@ gulp.task('browser-sync', function() {
 });
 /* ================================ */
 
-/* ========= ТАСК "HTML" ========== */
-gulp.task('html', function () {
-	return gulp.src(app + '*.html') //Выберем файлы по нужному пути
+/* ========= ТАСК "PUG" ========== */
+gulp.task('pug', function () {
+	return gulp.src(app + '*.pug') //Выберем файлы по нужному пути
 		.pipe(plumber(err)) // Отслеживаем ошибки
-		.pipe(include()) // Прогоним через file-include
+		.pipe(pug({ // Сконвертим в HTML
+			pretty: '\t' // Форматируем с табами вместо пробелов
+		}))
 		.pipe(gulp.dest(dist)) //Выплюнем их
 		.pipe(reload({stream: true})); //Перезагрузим сервер
 });
@@ -147,7 +150,7 @@ gulp.task('clean', function() {
 /* ========= ТАСК "BUILD" ========= */
 gulp.task('build', [
 	'clean',
-	'html',
+	'pug',
 	'sass',
 	'css-libs',
 	'js',
@@ -159,21 +162,13 @@ gulp.task('build', [
 
 /* ========= ТАСК "WATCH" ========= */
 gulp.task('watch', function() {
-	var watcherHtml = gulp.watch(app + '**/*.html', ['html']); // Наблюдение за HTML файлами
+	gulp.watch(app + '**/*.pug', ['pug']); // Наблюдение за PUG файлами
 	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['sass']); // Наблюдение за своими SCSS файлами
 	gulp.watch(app + 'src/libs.scss', ['css-libs']); // Наблюдение за скачанными CSS файлами
 	gulp.watch([app + 'src/**/*.js', '!' + app + 'src/libs.js'], ['js']); // Наблюдение за своими JS файлами
 	gulp.watch(app + 'src/libs.js', ['js-libs']); // Наблюдение за скачанными JS файлами
 	gulp.watch(app + 'img/*', ['img']); // Наблюдение за картинками
 	gulp.watch(app + 'fonts/*', ['fonts']); // Наблюдение за шрифтами
-
-	watcherHtml.on('change', function (event) { // Реакция на удаление HTML
-		if (event.type === 'deleted') {
-			var filePathFromSrc = path.relative(path.resolve('app'), event.path);
-			var destFilePath = path.resolve('dist', filePathFromSrc);
-			del.sync(destFilePath);
-		}
-	});
 });
 /* ================================ */
 

@@ -18,25 +18,25 @@ $path: '../';
 }
 
 @mixin screen-mobile($direct: 'min') {
-	@media (if ($direct == 'max', 'max-width: #{$point-xs} - 1', 'min-width: #{$point-xs}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-xs} - 1', 'min-width: #{$point-xs}')) {
 		@content;
 	}
 }
 
 @mixin screen-tablet($direct: 'min') {
-	@media (if ($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
 		@content;
 	}
 }
 
 @mixin screen-desktop($direct: 'min') {
-	@media (if ($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
 		@content;
 	}
 }
 
 @mixin screen-large($direct: 'min') {
-	@media (if ($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
+	@media (if($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
 		@content;
 	}
 }
