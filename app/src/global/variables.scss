@@ -1,0 +1,34 @@
+$color-main: initial;
+$color-webcenter: #e96259;
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$font-main: 'Tahoma', 'Arial', sans-serif;
+
+$path = '../';
+
+%clear {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+
+// Подключение изображений для ретины
+@mixin bgi-retina($file, $type: 'png', $width: 100%, $height: $width) {
+	background-image: url($file + '.' + $type);
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min-resolution: 144dpi) {
+		background-image: url($file + '@2x.' + $type);
+
+		@if $width == cover or $width == contain {
+			$height: null;
+		}
+
+		background-size: $width $height;
+	}
+}
