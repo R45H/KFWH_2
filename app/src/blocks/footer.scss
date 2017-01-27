@@ -1,3 +1,9 @@
 .footer {
 	flex: 0 0 auto;
+	padding: 80px 0;
+	background-color: $color-darker;
+
+	&__logo {
+		margin-bottom: 30px;
+	}
 }
