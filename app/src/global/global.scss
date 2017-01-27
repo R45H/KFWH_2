@@ -1,10 +1,31 @@
+* {
+	transition: $duration ease color;
+}
+
 html {
-	font-size: 10px;
+	height: 100%;
+	font-size: 7px;
+
+	@include screen-tablet() {
+		font-size: 8px;
+	}
+
+	@include screen-desktop() {
+		font-size: 9px;
+	}
+
+	@include screen-large() {
+		font-size: 10px;
+	}
 }
 
 body {
 	font-size: 1.6rem;
 	font-family: $font-main;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: lightskyblue;
 }
 
 input {
@@ -13,5 +34,15 @@ input {
 }
 
 ::selection {
-	background-color: initial;
+
+}
+
+a {
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $color-main;
+	}
 }

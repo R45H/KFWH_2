@@ -1,7 +1,12 @@
 @import url('global/variables.scss'); // SASS переменные
-@import url('global/global.scss');    // Глобальные стили
-@import url('global/fonts.scss');     // Шрифты
+@import url('global/global.scss'); // Глобальные стили
+@import url('global/fonts.scss'); // Шрифты
 
-@import url('blocks/header.scss');    // Шапка
-@import url('blocks/main.scss');      // Контейнер контента
-@import url('blocks/footer.scss');    // Подвал
+@import url('blocks/logo.scss'); // Лого
+@import url('blocks/header.scss'); // Шапка
+@import url('blocks/main.scss'); // Контейнер контента
+@import url('blocks/footer.scss'); // Подвал
+@import url('blocks/cont.scss'); // Блок с контактами
+@import url('blocks/menu.scss'); // Меню
+@import url('blocks/separ.scss'); // Разделитель
+@import url('blocks/lang.scss'); // Блок выбора языка

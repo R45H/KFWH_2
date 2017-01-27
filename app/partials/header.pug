@@ -1,2 +1,33 @@
 // HEADER
 header.header
+	.container
+		.header__wrap
+
+			.header__col
+				a.logo.header__logo(href="/")
+					img.logo__img(src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Knight Frank")
+
+			.header__col.header__col_upper
+				ul.menu
+					li.menu__item
+						a.menu__link(href="#") О компании
+					li.menu__item
+						a.menu__link(href="#") Недвижимость
+					li.menu__item
+						a.menu__link(href="#") Земельные участки
+					li.separ.separ_md
+					li.menu__item
+						a.menu__link(href="#") Отправить заявку
+					li.menu__item
+						a.menu__link(href="#") Контакты
+					li.menu__item
+						a.menu__link.menu__link_search(href="#") Поиск
+
+			.header__col
+				.cont.header__cont
+					p.cont__addr ул. Маяковского, 3Б
+					a.cont__phone(href="tel:78123632222") +7 812 363 2222
+
+			.lang.header__lang
+				a(href="#").lang__item.lang__item_active ru
+				a(href="#").lang__item en

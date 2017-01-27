@@ -1,0 +1,10 @@
+.separ {
+	display: block;
+
+	&_md {
+
+		@include screen-desktop() {
+			display: none;
+		}
+	}
+}

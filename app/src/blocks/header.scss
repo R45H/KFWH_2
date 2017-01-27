@@ -1,3 +1,85 @@
 .header {
+	height: $top-height * 1.6;
+	padding: 2em 0;
+	background-color: white;
 
+	@include screen-small() {
+		height: $top-height;
+		position: fixed;
+		width: 100%;
+	}
+
+	&__logo {
+		max-width: 100px;
+		display: block;
+		margin: 0 auto 20px;
+
+		@include screen-small() {
+			margin: 0 1em 0 0;
+			max-width: 70%;
+		}
+
+		@include screen-tablet(){
+			max-width: 80%;
+		}
+
+		@include screen-desktop(){
+			max-width: 90%;
+		}
+
+		@include screen-large(){
+			max-width: 100%;
+		}
+	}
+
+	&__cont {
+		margin-left: 1em;
+		text-align: center;
+
+		@include screen-small() {
+			text-align: right;
+			margin-right: 50px;
+		}
+
+		@include screen-large() {
+			margin-right: 0;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include screen-small() {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__col {
+
+		&_upper {
+
+			@include screen-mobile() {
+				margin-top: -1em;
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&__lang {
+		position: absolute;
+		right: 0;
+
+		@include screen-tablet() {
+			position: fixed;
+			right: 15px;
+		}
+
+		@include screen-large() {
+			position: absolute;
+			right: -50px;
+		}
+	}
 }
