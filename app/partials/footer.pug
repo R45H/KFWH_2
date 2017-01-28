@@ -4,9 +4,9 @@ footer.footer
 		a.logo.footer__logo(href="/")
 			img.logo__img(src="img/logo.png" srcset="img/logo@2x.png 2x" alt="Knight Frank")
 
-		.row
-			.col-sm-10
-				ul.menu
+		.row.footer__flex
+			.col-xs-10.footer__col
+				ul.menu.footer__menu
 					li.menu__item
 						a.menu__link(href="#") О компании
 					li.menu__item
@@ -19,46 +19,58 @@ footer.footer
 						a.menu__link(href="#") Контакты
 
 				.row
-					.col-sm-4
-						form
-							input(type="text" placeholder="Имя")
-							input(type="text" placeholder="Объект недвижимости")
-							input(type="text" placeholder="Подробности")
+					.col-xs-4.footer__col-half
+						form.form.footer__form
+							p.form__descr Заказать обратный звонок
+							input.input.form__input(type="text" placeholder="Имя")
+							input.input.form__input(type="text" placeholder="Объект недвижимости")
+							textarea.input.form__input(rows="4" placeholder="Подробности")
 							.row
-								.col-sm-9
-									input(type="text" placeholder="Телефон")
-								.col-sm-3
-									input(type="submit" value="Заказать")
-					.col-sm-8
+								.col-xs-8.form__separ
+									input.input.form__input(type="text" placeholder="Телефон")
+								.col-xs-4.form__separ
+									input.button.form__button(type="submit" value="Заказать")
+					.col-xs-7.col-xs-offset-1.footer__col
 						.row
-							.col-sm-6
+							.col-xs-6.footer__xxs
 								.simple-list
 									.simple-list__num 1.
 									.simple-list__descr Аренда склада
-							.col-sm-6
+							.col-xs-6.footer__xxs
 								.simple-list
 									.simple-list__num 2.
 									.simple-list__descr Продажа склада
 						.row
-							.col-sm-6
+							.col-xs-6.footer__xxs
 								.simple-list
 									.simple-list__num 3.
 									.simple-list__descr Ответственное хранение
-							.col-sm-6
+							.col-xs-6.footer__xxs
 								.simple-list
 									.simple-list__num 4.
 									.simple-list__descr Индустриальные парки
 
-				.cont
+				.cont.footer__cont
 					p.cont__addr ул. Маяковского, 3Б
 					a.cont__phone(href="tel:78123632222") +7 812 363 2222
 
-			.col-sm-2
-				//TODO Социальные иконки
+			.col-xs-2.footer__col
+				.footer__social
+					a.soc.soc__fb.footer__soc-item(href="#")
+						i.fa.fa-facebook.soc__img(aria-hidden="true")
+					a.soc.soc__in.footer__soc-item(href="#")
+						i.fa.fa-linkedin.soc__img(aria-hidden="true")
+					a.soc.soc__tw.footer__soc-item(href="#")
+						i.fa.fa-twitter.soc__img(aria-hidden="true")
+					a.soc.soc__you.footer__soc-item(href="#")
+						i.fa.fa-youtube-play.soc__img(aria-hidden="true")
+					a.soc.soc__inst.footer__soc-item(href="#")
+						i.fa.fa-instagram.soc__img(aria-hidden="true")
 
-		.copyright
+		.copyright.footer__copyright
 			p.copyright__descr
 				a.copyright__link(href="#") Глобальная политика конфиденциальности
 			p.copyright__descr Copyright © Knight Frank 2016
 			p.copyright__descr Разработано в
-				a.copyright__webcenter(href="webcenter.pro" target="_blank") webcenter.pro
+				=" "
+				a.copyright__link.copyright__webcenter(href="http://webcenter.pro/" target="_blank") webcenter.pro

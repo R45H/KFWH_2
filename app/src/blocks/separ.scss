@@ -3,7 +3,7 @@
 
 	&_md {
 
-		@include screen-desktop() {
+		@include screen-md() {
 			display: none;
 		}
 	}

@@ -6,7 +6,8 @@ $color-dark:      #565655;
 $color-darker:    #323232;
 $color-webcenter: #e96259;
 
-$point-xxs: 500px;
+$point-xxxs: 500px;
+$point-xxs: 675px;
 $point-xs:  850px;
 $point-sm:  1028px;
 $point-md:  1252px;
@@ -27,27 +28,32 @@ $top-height: 7.5em;
 	clear: both;
 }
 
-@mixin screen-small($direct: 'min') {
+@mixin screen-xxxs($direct: 'min') {
+	@media (if($direct == 'max', 'max-width: #{$point-xxxs} - 1', 'min-width: #{$point-xxxs}')) {
+		@content;
+	}
+}
+@mixin screen-xxs($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-xxs} - 1', 'min-width: #{$point-xxs}')) {
 		@content;
 	}
 }
-@mixin screen-mobile($direct: 'min') {
+@mixin screen-xs($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-xs} - 1', 'min-width: #{$point-xs}')) {
 		@content;
 	}
 }
-@mixin screen-tablet($direct: 'min') {
+@mixin screen-sm($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
 		@content;
 	}
 }
-@mixin screen-desktop($direct: 'min') {
+@mixin screen-md($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-md} - 1', 'min-width: #{$point-md}')) {
 		@content;
 	}
 }
-@mixin screen-large($direct: 'min') {
+@mixin screen-lg($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-lg} - 1', 'min-width: #{$point-lg}')) {
 		@content;
 	}

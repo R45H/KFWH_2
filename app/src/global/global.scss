@@ -1,20 +1,16 @@
-* {
-	transition: $duration ease color;
-}
-
 html {
 	height: 100%;
 	font-size: 7px;
 
-	@include screen-tablet() {
+	@include screen-sm() {
 		font-size: 8px;
 	}
 
-	@include screen-desktop() {
+	@include screen-md() {
 		font-size: 9px;
 	}
 
-	@include screen-large() {
+	@include screen-lg() {
 		font-size: 10px;
 	}
 }
@@ -31,6 +27,20 @@ body {
 input {
 	-webkit-appearance: none;
 	border-radius: 0;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+textarea {
+	resize: none;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
 }
 
 ::selection {
@@ -39,6 +49,7 @@ input {
 
 a {
 	text-decoration: underline;
+	transition: $duration ease all;
 
 	&:hover,
 	&:focus {

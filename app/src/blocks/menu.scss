@@ -1,40 +1,29 @@
 .menu {
-	display: none;
-
-	@include screen-mobile() {
-		display: block;
-		padding: 0;
-		margin: 0;
-		line-height: 1em;
-	}
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
 
 	&__item {
+		list-style-type: none;
+		display: inline-block;
+		margin-right: 1em;
 
-		@include screen-mobile() {
-			list-style-type: none;
-			display: inline-block;
-			margin-right: 1em;
-
-			&:last-child {
-				margin-right: 0;
-			}
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 
 	&__link {
-
-		@include screen-mobile() {
-			display: inline-block;
-			color: $color-gray;
-			text-transform: uppercase;
-			font-size: 1.4rem;
-			font-weight: 800;
-			text-decoration: none;
-			vertical-align: top;
-			line-height: 1em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-		}
+		display: inline-block;
+		color: $color-gray;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		font-weight: 800;
+		text-decoration: none;
+		vertical-align: top;
+		line-height: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 
 		&_search {
 			position: relative;

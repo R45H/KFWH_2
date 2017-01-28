@@ -2,8 +2,9 @@
 	height: $top-height * 1.6;
 	padding: 2em 0;
 	background-color: white;
+	z-index: 10;
 
-	@include screen-small() {
+	@include screen-xxs() {
 		height: $top-height;
 		position: fixed;
 		width: 100%;
@@ -14,21 +15,29 @@
 		display: block;
 		margin: 0 auto 20px;
 
-		@include screen-small() {
+		@include screen-xxs() {
 			margin: 0 1em 0 0;
 			max-width: 70%;
 		}
 
-		@include screen-tablet(){
+		@include screen-sm(){
 			max-width: 80%;
 		}
 
-		@include screen-desktop(){
+		@include screen-md(){
 			max-width: 90%;
 		}
 
-		@include screen-large(){
+		@include screen-lg(){
 			max-width: 100%;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@include screen-sm() {
+			display: block;
 		}
 	}
 
@@ -36,12 +45,12 @@
 		margin-left: 1em;
 		text-align: center;
 
-		@include screen-small() {
+		@include screen-xxs() {
 			text-align: right;
 			margin-right: 50px;
 		}
 
-		@include screen-large() {
+		@include screen-lg() {
 			margin-right: 0;
 		}
 	}
@@ -51,7 +60,7 @@
 		flex-direction: column;
 		position: relative;
 
-		@include screen-small() {
+		@include screen-xxs() {
 			flex-direction: row;
 			justify-content: space-between;
 		}
@@ -61,7 +70,7 @@
 
 		&_upper {
 
-			@include screen-mobile() {
+			@include screen-xs() {
 				margin-top: -1em;
 				font-size: 1.4rem;
 			}
@@ -72,12 +81,12 @@
 		position: absolute;
 		right: 0;
 
-		@include screen-tablet() {
+		@include screen-sm() {
 			position: fixed;
 			right: 15px;
 		}
 
-		@include screen-large() {
+		@include screen-lg() {
 			position: absolute;
 			right: -50px;
 		}

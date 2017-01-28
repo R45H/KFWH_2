@@ -1,0 +1,24 @@
+.button {
+	text-transform: uppercase;
+	background-color: $color-main;
+	color: white;
+	border: none;
+	padding: 7px;
+	font-weight: 800;
+	transition: $duration / 2 ease all;
+	font-size: 1.4rem;
+
+	@include screen-sm() {
+		font-size: 1.2rem;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: lighten($color-main, 20%);
+	}
+
+	&:active {
+		background-color: darken($color-main, 20%);
+		color: darken(white, 20%);
+	}
+}

@@ -1,0 +1,41 @@
+.input {
+	border: none;
+	background-color: $color-gray;
+	padding: 7px;
+	color: $color-darker;
+	font-weight: 600;
+	transition: $duration / 2 ease all;
+	font-size: 1.4rem;
+
+	@include screen-sm() {
+		font-size: 1.2rem;
+	}
+
+	&:hover {
+		background-color: lighten($color-gray, 20%);
+	}
+
+	&:focus {
+		background-color: $color-lighter;
+	}
+
+	&::-webkit-input-placeholder {
+		color: $color-darker;
+		text-transform: uppercase;
+	}
+
+	&::-moz-placeholder {
+		color: $color-darker;
+		text-transform: uppercase;
+	}
+
+	&:-moz-placeholder {
+		color: $color-darker;
+		text-transform: uppercase;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color-darker;
+		text-transform: uppercase;
+	}
+}
