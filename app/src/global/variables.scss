@@ -7,11 +7,11 @@ $color-darker:    #323232;
 $color-webcenter: #e96259;
 
 $point-xxxs: 500px;
-$point-xxs: 675px;
-$point-xs:  890px;
-$point-sm:  1178px;
-$point-md:  1402px;
-$point-lg:  1610px;
+$point-xxs:  675px;
+$point-xs:   890px;
+$point-sm:   1178px;
+$point-md:   1402px;
+$point-lg:   1610px;
 
 $font-main: 'GothamPro', 'Arial', sans-serif;
 
@@ -73,4 +73,13 @@ $top-height: 7.5em;
 
 		background-size: $width $height;
 	}
+}
+
+%line {
+	content: '';
+	width: 1em;
+	height: 5px;
+	background-color: white;
+	display: block;
+	margin-top: .3em;
 }
