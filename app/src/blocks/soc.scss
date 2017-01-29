@@ -8,6 +8,11 @@
 	font-size: 3.5rem;
 	position: relative;
 
+	&:hover,
+	&:focus {
+		background-color: lighten($color-gray, 20%);
+	}
+
 	&__img {
 		position: absolute;
 		top: 50%;
