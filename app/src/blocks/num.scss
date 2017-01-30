@@ -1,0 +1,17 @@
+.num {
+	font-size: 10.7rem;
+	font-weight: 800;
+	color: white;
+	margin: 0;
+	display: inline-block;
+	pointer-events: auto;
+	line-height: 1em;
+
+	@include screen-xxs() {
+		font-size: 13.7rem;
+	}
+
+	&_red {
+		color: $color-main;
+	}
+}

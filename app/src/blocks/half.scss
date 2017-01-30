@@ -1,0 +1,94 @@
+.half {
+	position: relative;
+
+	@include screen-sm() {
+		display: flex;
+	}
+
+	&__wrap {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		pointer-events: none;
+		margin-top: 3em;
+
+		@include screen-sm(max) {
+			width: 100%;
+		}
+	}
+
+	&__side {
+		width: 100%;
+		padding: 10% 15%;
+		background: 50% 50% no-repeat;
+		background-size: cover;
+		position: relative;
+		color: $color-dark;
+		text-transform: uppercase;
+
+		@include screen-sm() {
+			width: 50%;
+			padding: 7% 15%;
+		}
+
+		&_gray {
+			background-color: $color-dark;
+			color: white;
+		}
+
+		&_line {
+
+			@include screen-sm(max) {
+				border-bottom: 5px solid $color-dark;
+			}
+		}
+
+		&_img_1 {
+			padding-bottom: 100%;
+			background-image: url($path + 'img/section-half-1.jpg');
+
+			@include screen-xxxs() {
+				padding-bottom: 40%;
+			}
+
+			&::before {
+				@extend %fog;
+			}
+		}
+	}
+
+	&__h3 {
+		margin-bottom: 2em;
+	}
+
+	&__descr {
+		font-size: 1.6rem;
+		font-weight: 600;
+		margin-bottom: 1.5em;
+	}
+
+	&__title {
+		font-size: 2.8rem;
+		font-weight: 800;
+		line-height: 1.5em;
+		margin: 1.5em 0;
+
+		&::after {
+			@extend %line;
+			margin-top: 1em;
+		}
+	}
+
+	&__author {
+		font-size: 2.2rem;
+		font-weight: 800;
+		margin-bottom: 1em;
+	}
+
+	&__post {
+		font-size: 1.6rem;
+		font-weight: 600;
+		margin-bottom: .7em;
+	}
+}

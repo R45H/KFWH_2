@@ -1,0 +1,28 @@
+.h2 {
+	font-size: 3.3rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: $color-dark;
+	margin: 0 0 .5em 0;
+
+	@include screen-xxs() {
+		font-size: 5.3rem;
+	}
+
+	&__important {
+		font-size: 4.1rem;
+		color: $color-main;
+
+		@include screen-xxs() {
+			font-size: 6.1rem;
+		}
+	}
+
+	&_line {
+
+		&::after {
+			@extend %line_red;
+			margin-top: .5em;
+		}
+	}
+}

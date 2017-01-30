@@ -16,25 +16,19 @@
 		}
 
 		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: rgba(0, 0, 0, .2);
+			@extend %fog;
 		}
 
 		&_img_1 {
-			background-image: url('../img/slide-1.jpg');
+			background-image: url($path + 'img/slide-1.jpg');
 		}
 
 		&_img_2 {
-			background-image: url('../img/slide-2.jpg');
+			background-image: url($path + 'img/slide-2.jpg');
 		}
 
 		&_img_3 {
-			background-image: url('../img/slide-3.jpg');
+			background-image: url($path + 'img/slide-3.jpg');
 		}
 	}
 

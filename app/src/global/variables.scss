@@ -77,9 +77,24 @@ $top-height: 7.5em;
 
 %line {
 	content: '';
-	width: 1em;
+	width: 7rem;
 	height: 5px;
 	background-color: white;
 	display: block;
 	margin-top: .3em;
+}
+
+%line_red {
+	@extend %line;
+	background-color: $color-main;
+}
+
+%fog {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .2);
 }
