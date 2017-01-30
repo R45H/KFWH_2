@@ -37,6 +37,11 @@
 			color: white;
 		}
 
+		&_red {
+			background-color: $color-main;
+			color: white;
+		}
+
 		&_line {
 
 			@include screen-sm(max) {

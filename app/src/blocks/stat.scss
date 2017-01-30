@@ -1,0 +1,18 @@
+.stat {
+	text-align: center;
+
+	&__title {
+		font-size: 5.6rem;
+		font-weight: 800;
+		color: $color-main;
+	}
+
+	&__descr {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $color-dark;
+		text-transform: uppercase;
+	}
+
+
+}

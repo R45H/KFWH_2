@@ -7,4 +7,12 @@
 			display: none;
 		}
 	}
+
+	&_none_xs {
+		display: none;
+
+		@include screen-xs() {
+			display: block;
+		}
+	}
 }
