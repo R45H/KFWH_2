@@ -1,3 +1,21 @@
 .section {
 
+	&__flex {
+		display: flex;
+		align-items: stretch;
+	}
+
+	&__flex-item {
+		padding: 0 15px;
+		width: 25%;
+		margin-bottom: 3em;
+	}
+
+	&__center {
+		text-align: center;
+	}
+
+	&_space {
+		margin: 5em 0 3em;
+	}
 }

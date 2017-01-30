@@ -21,4 +21,8 @@
 		background-color: darken($color-main, 20%);
 		color: darken(white, 20%);
 	}
+
+	&_lg {
+		padding: 10px 20px;
+	}
 }

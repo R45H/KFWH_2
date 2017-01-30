@@ -1,0 +1,66 @@
+.offer {
+	position: relative;
+
+	&::after {
+		@extend %line_red;
+		position: absolute;
+		bottom: 0;
+	}
+
+	&__link {
+		text-decoration: none;
+		display: block;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+
+			.offer {
+
+				&__descr {
+					color: $color-main;
+				}
+
+				&__title {
+					color: $color-main;
+				}
+			}
+		}
+	}
+
+	&__img {
+		background: no-repeat 50% 50%;
+		background-size: cover;
+		padding-bottom: 65%;
+		margin-bottom: 1.8em;
+
+		&_1 {
+			background-image: url($path + 'img/offer-1.jpg');
+		}
+
+		&_2 {
+			background-image: url($path + 'img/offer-2.jpg');
+		}
+
+		&_3 {
+			background-image: url($path + 'img/offer-3.jpg');
+		}
+
+		&_4 {
+			background-image: url($path + 'img/slide-2.jpg');
+		}
+	}
+
+	&__descr {
+		font-size: 1.9rem;
+		color: $color-dark;
+		line-height: 1.3em;
+		position: relative;
+		margin-bottom: 1.5em;
+		transition: $duration * 2 ease;
+	}
+
+	&__title {
+		transition: $duration * 2 ease;
+	}
+}

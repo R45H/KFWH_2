@@ -30,6 +30,10 @@
 		&_img_3 {
 			background-image: url($path + 'img/slide-3.jpg');
 		}
+
+		&_img_4 {
+			background-image: url($path + 'img/slide-4.jpg');
+		}
 	}
 
 	&__content {
@@ -84,6 +88,10 @@
 		font-size: 1.3rem;
 		line-height: 1.6em;
 		margin-bottom: 1.5em;
+	}
+
+	&__num {
+		margin-bottom: .3em;
 	}
 
 	&__dots {
