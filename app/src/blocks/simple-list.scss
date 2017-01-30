@@ -1,6 +1,14 @@
 .simple-list {
 	display: table;
 	text-align: left;
+	text-decoration: none;
+	color: $color-dark;
+
+	&:hover,
+	&:focus {
+		color: $color-main;
+
+	}
 
 	&__num,
 	&__descr {
@@ -20,8 +28,8 @@
 	&__descr {
 		font-size: 2.3rem;
 		text-transform: uppercase;
-		color: $color-dark;
 		line-height: 1.3em;
 		padding-right: 50px;
+		text-decoration: none;
 	}
 }

@@ -5,7 +5,7 @@
 		background: no-repeat 50% 50%;
 		background-size: cover;
 		position: relative;
-		padding-bottom: 150%;
+		padding-bottom: 110%;
 
 		@include screen-xxxs() {
 			padding-bottom: 60%;
@@ -15,8 +15,26 @@
 			padding-bottom: 45%;
 		}
 
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, .2);
+		}
+
 		&_img_1 {
 			background-image: url('../img/slide-1.jpg');
+		}
+
+		&_img_2 {
+			background-image: url('../img/slide-2.jpg');
+		}
+
+		&_img_3 {
+			background-image: url('../img/slide-3.jpg');
 		}
 	}
 
@@ -45,6 +63,10 @@
 		line-height: 1.2em;
 		margin: 0 0 .5em 0;
 
+		@include screen-xxs() {
+			font-size: 5rem;
+		}
+
 		@include screen-xs() {
 			font-size: 6.3rem;
 		}
@@ -72,10 +94,11 @@
 
 	&__dots {
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
+		right: 0;
 		text-align: center;
 		bottom: 4%;
+		pointer-events: none;
 	}
 
 	&__dot {
@@ -89,6 +112,7 @@
 		cursor: pointer;
 		transition: $duration ease;
 		padding: 1em 0;
+		pointer-events: auto;
 
 		&:last-child {
 			margin-right: 0;
@@ -102,16 +126,17 @@
 	.owl-prev,
 	.owl-next {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0;
+		bottom: 0;
 		opacity: .6;
 		transition: $duration ease;
-		background-repeat: no-repeat;
 		background-size: contain;
+		background: no-repeat 50% 50%;
 		overflow: hidden;
-		height: 40%;
 		width: 12%;
 		display: none;
+		padding: 0 15px;
+		box-sizing: content-box;
 
 		@include screen-sm() {
 			display: block;
@@ -120,20 +145,19 @@
 		&:hover,
 		&:focus {
 			opacity: 1;
+			background-color: rgba(0, 0, 0, .1);
 		}
 	}
 
 	.owl-prev {
-		left: 15px;
+		left: 0;
 		max-width: 53px;
-		max-height: 129px;
 		@include bgi-retina('../img/prev');
 	}
 
 	.owl-next {
-		right: 15px;
+		right: 0;
 		max-width: 94px;
-		max-height: 129px;
 		@include bgi-retina('../img/next');
 	}
 }
