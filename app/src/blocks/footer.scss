@@ -3,13 +3,13 @@
 	padding: 4em 0;
 	background-color: $color-darker;
 
-	@include screen-xs(max) {
+	@include screen-sm(max) {
 		text-align: center;
 	}
 
 	&__flex {
 
-		@include screen-xs() {
+		@include screen-sm() {
 			display: flex;
 		}
 	}
@@ -25,7 +25,7 @@
 	&__cont {
 		margin: 2em 0 0;
 
-		@include screen-xs(max) {
+		@include screen-sm(max) {
 			margin-bottom: 2em;
 		}
 	}
@@ -34,15 +34,35 @@
 		margin-top: 2.5em;
 	}
 
+	&__col {
+
+		@include screen-sm(max) {
+			width: 100%;
+		}
+	}
+
+	&__col-half {
+
+		@include screen-sm(max) {
+			width: 60%;
+			margin: 0 auto;
+			float: none;
+		}
+
+		@include screen-xxs(max) {
+			width: 100%;
+		}
+	}
+
 	&__social {
 		display: flex;
 		justify-content: space-around;
 
-		@include screen-xxxs() {
+		@include screen-xxs() {
 			display: block;
 		}
 
-		@include screen-xs() {
+		@include screen-sm() {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -53,59 +73,17 @@
 		.soc {
 			margin-right: 0;
 
-			@include screen-xxxs() {
-				margin-right: 1em;
+			@include screen-xxs() {
+				margin-right: 15px;
 			}
 
-			@include screen-xs() {
+			@include screen-sm() {
 				margin-right: 0;
 			}
 
 			&:last-child {
 				margin-right: 0;
 			}
-		}
-	}
-
-	&__col {
-
-		@include screen-xs(max) {
-			margin: 0;
-			width: 100%;
-			float: none;
-		}
-	}
-
-	&__col-half {
-
-		@include screen-xs(max) {
-			width: 50%;
-			margin: 0 auto;
-			float: none;
-		}
-
-		@include screen-xxxs(max) {
-			width: 100%;
-		}
-	}
-
-	&__xxs {
-
-		@include screen-xxs(max) {
-			width: 50%;
-			margin: 0 auto;
-			float: none;
-		}
-
-		@include screen-xxxs(max) {
-			width: 100%;
-		}
-	}
-
-	&__form {
-
-		@include screen-xs(max) {
-			margin-bottom: 1.5em;
 		}
 	}
 }

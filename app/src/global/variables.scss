@@ -6,12 +6,11 @@ $color-dark:      #565655;
 $color-darker:    #323232;
 $color-webcenter: #e96259;
 
-$point-xxxs: 500px;
-$point-xxs:  675px;
-$point-xs:   890px;
-$point-sm:   1178px;
-$point-md:   1402px;
-$point-lg:   1610px;
+$point-xxs: 500px;
+$point-xs:  630px;
+$point-sm:  918px;
+$point-md:  1142px;
+$point-lg:  1350px;
 
 $font-main: 'GothamPro', 'Arial', sans-serif;
 
@@ -19,7 +18,7 @@ $duration: .3s;
 
 $path: '../';
 
-$top-height: 7.5em;
+$top-height: 6em;
 
 %clear {
 	content: '';
@@ -28,11 +27,6 @@ $top-height: 7.5em;
 	clear: both;
 }
 
-@mixin screen-xxxs($direct: 'min') {
-	@media (if($direct == 'max', 'max-width: #{$point-xxxs} - 1', 'min-width: #{$point-xxxs}')) {
-		@content;
-	}
-}
 @mixin screen-xxs($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-xxs} - 1', 'min-width: #{$point-xxs}')) {
 		@content;

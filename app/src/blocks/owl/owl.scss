@@ -7,11 +7,15 @@
 		position: relative;
 		padding-bottom: 110%;
 
-		@include screen-xxxs() {
+		@include screen-xs() {
 			padding-bottom: 60%;
 		}
 
-		@include screen-xs() {
+		@include screen-sm() {
+			padding-bottom: 50%;
+		}
+
+		@include screen-lg() {
 			padding-bottom: 45%;
 		}
 
@@ -61,11 +65,19 @@
 		line-height: 1.2em;
 		margin: 0 0 .5em 0;
 
-		@include screen-xxs() {
+		@include screen-xs() {
+			font-size: 4rem;
+		}
+
+		@include screen-sm() {
 			font-size: 5rem;
 		}
 
-		@include screen-xs() {
+		@include screen-md() {
+			font-size: 5.5rem;
+		}
+
+		@include screen-lg() {
 			font-size: 6.3rem;
 		}
 

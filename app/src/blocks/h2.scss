@@ -5,7 +5,7 @@
 	color: $color-dark;
 	margin: 0 0 .5em 0;
 
-	@include screen-xxs() {
+	@include screen-xs() {
 		font-size: 5.3rem;
 	}
 
@@ -13,7 +13,7 @@
 		font-size: 4.1rem;
 		color: $color-main;
 
-		@include screen-xxs() {
+		@include screen-xs() {
 			font-size: 6.1rem;
 		}
 	}

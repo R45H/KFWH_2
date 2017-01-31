@@ -29,7 +29,7 @@
 
 		@include screen-sm() {
 			width: 50%;
-			padding: 7% 15%;
+			padding: 7% 9%;
 		}
 
 		&_gray {
@@ -53,7 +53,7 @@
 			padding-bottom: 100%;
 			background-image: url($path + 'img/section-half-1.jpg');
 
-			@include screen-xxxs() {
+			@include screen-xs() {
 				padding-bottom: 40%;
 			}
 

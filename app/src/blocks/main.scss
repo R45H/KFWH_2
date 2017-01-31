@@ -1,7 +1,7 @@
 .main {
 	flex: 1 0 auto;
 
-	@include screen-xxs() {
+	@include screen-sm() {
 		padding-top: $top-height;
 	}
 }

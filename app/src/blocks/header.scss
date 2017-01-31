@@ -1,10 +1,10 @@
 .header {
-	height: $top-height * 1.6;
-	padding: 2em 0;
+	height: $top-height * 1.8;
+	padding: 1.5em 0;
 	background-color: white;
 	z-index: 10;
 
-	@include screen-xxs() {
+	@include screen-sm() {
 		height: $top-height;
 		position: fixed;
 		width: 100%;
@@ -15,7 +15,7 @@
 		display: block;
 		margin: 0 auto 20px;
 
-		@include screen-xxs() {
+		@include screen-xs() {
 			margin: 0 1em 0 0;
 			max-width: 70%;
 		}
@@ -42,12 +42,11 @@
 	}
 
 	&__cont {
-		margin-left: 1em;
 		text-align: center;
 
-		@include screen-xxs() {
+		@include screen-xs() {
 			text-align: right;
-			margin-right: 50px;
+			margin: 0 50px 0 1em;
 		}
 
 		@include screen-sm() {
@@ -60,7 +59,7 @@
 		flex-direction: column;
 		position: relative;
 
-		@include screen-xxs() {
+		@include screen-xs() {
 			flex-direction: row;
 			justify-content: space-between;
 		}
@@ -72,7 +71,7 @@
 
 			@include screen-xs() {
 				margin-top: -1em;
-				font-size: 1.4rem;
+				font-size: 1.1rem;
 			}
 		}
 	}
@@ -80,6 +79,11 @@
 	&__lang {
 		position: absolute;
 		right: 0;
+		font-size: 2rem;
+
+		@include screen-xs() {
+			font-size: 1.1rem;
+		}
 
 		@include screen-sm() {
 			position: fixed;

@@ -7,7 +7,7 @@
 	pointer-events: auto;
 	line-height: 1em;
 
-	@include screen-xxs() {
+	@include screen-xs() {
 		font-size: 13.7rem;
 	}
 
