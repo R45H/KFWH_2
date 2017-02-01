@@ -1,0 +1,111 @@
+.toggle {
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	position: relative;
+
+	&:hover {
+
+		.toggle {
+
+			&__line {
+				background-color: $color-main;
+			}
+
+			&__title {
+				color: $color-main;
+			}
+		}
+	}
+
+	&__line {
+		@extend %line;
+		height: 2px;
+		width: 13px;
+		background-color: $color-gray;
+		margin-bottom: 2px;
+		transition: transform $duration ease,
+		background-color $duration ease,
+		opacity $duration / 2 ease;
+
+		@include screen-lg() {
+			height: 5px;
+			margin-bottom: 5px;
+			width: 32px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		position: absolute;
+		left: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.5rem;
+		line-height: 3em;
+		height: 30px;
+		color: $color-gray;
+		font-weight: 800;
+		transition: $duration / 4 ease;
+		text-transform: uppercase;
+		padding: 0 10px 0 0;
+		display: inline-block;
+		opacity: 1;
+		visibility: visible;
+		user-select: none;
+
+		@include screen-lg() {
+			height: 45px;
+			padding: 0 10px;
+		}
+
+		&_hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&_fixed {
+		z-index: 20;
+		top: 10px;
+		left: 10px;
+		position: absolute;
+
+		@include screen-xs() {
+			position: fixed;
+		}
+	}
+
+	&_active {
+
+		.toggle {
+
+			&__line {
+
+				&:first-child {
+					transform: translateY(4px) rotate(-45deg);
+
+					@include screen-lg() {
+						transform: translateY(10px) rotate(-45deg);
+					}
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:last-child {
+					transform: translateY(-4px) rotate(45deg);
+
+					@include screen-lg() {
+						transform: translateY(-10px) rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+}
