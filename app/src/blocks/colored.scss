@@ -1,0 +1,70 @@
+.colored {
+	padding: 0;
+
+	@include screen-xxs() {
+		display: flex;
+	}
+
+	&__img,
+	&__text {
+
+		@include screen-xxs() {
+			width: 50%;
+		}
+	}
+
+	&__img {
+		padding-bottom: 75%;
+		background: no-repeat 50% 50%;
+		background-size: cover;
+
+		@include screen-xxs() {
+			padding-bottom: 0;
+		}
+
+		&_img_1 {
+			background-image: url($path + 'img/colored-1.jpg');
+		}
+
+		&_img_2 {
+			background-image: url($path + 'img/colored-2.jpg');
+		}
+
+		&_img_3 {
+			background-image: url($path + 'img/colored-3.jpg');
+		}
+
+		&_img_4 {
+			background-image: url($path + 'img/colored-4.jpg');
+		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		padding: 1em 1.5em 1.5em;
+
+		@include screen-lg() {
+			padding: 2em 2.5em 2.5em;
+		}
+	}
+
+	&__date {
+		font-size: 1.2rem;
+		color: $color-gray;
+		margin: 0 0 1em 0;
+		font-weight: 800;
+	}
+
+	&__title {
+		color: $color-dark;
+		font-size: 1.9rem;
+		margin: 0 0 .3em;
+		line-height: 1.4em;
+		font-weight: 800;
+
+		&::after {
+			@extend %line_red;
+			margin-top: 1em;
+		}
+	}
+}
