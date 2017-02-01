@@ -83,6 +83,11 @@ $top-height: 6em;
 	background-color: $color-main;
 }
 
+%line_gray {
+	@extend %line;
+	background-color: $color-light;
+}
+
 %fog {
 	content: '';
 	position: absolute;

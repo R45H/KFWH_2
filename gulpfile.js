@@ -18,7 +18,8 @@ var
    cssImport    = require('gulp-cssimport'),               // Работа @import
 	path         = require('path'),                         // Для работы с путями
 	strip        = require('gulp-strip-css-comments'),      // Убирает комментарии
-	pug          = require('gulp-pug')                      // Шаблонизатор Pug (бывший Jade)
+	pug          = require('gulp-pug'),                     // Шаблонизатор Pug (бывший Jade)
+	runSequence  = require('run-sequence')                  // Для синхронного выполнения задач
 ;
 /* ================================ */
 
@@ -148,16 +149,21 @@ gulp.task('clean', function() {
 /* ================================ */
 
 /* ========= ТАСК "BUILD" ========= */
-gulp.task('build', [
-	'clean',
-	'pug',
-	'sass',
-	'css-libs',
-	'js',
-	'js-libs',
-	'img',
-	'fonts'
-]);
+gulp.task('build', function(callback) {
+	runSequence(
+		'clean',
+		[
+			'pug',
+			'sass',
+			'css-libs',
+			'js',
+			'js-libs',
+			'img',
+			'fonts'
+		],
+		callback
+	);
+});
 /* ================================ */
 
 /* ========= ТАСК "WATCH" ========= */
@@ -179,7 +185,14 @@ gulp.task('watch', function() {
 /* -------------------------------- */
 
 /* ===== КОМАНДА ПО УМОЛЧАНИЮ ===== */
-gulp.task('default', ['build', 'browser-sync', 'watch']);
+gulp.task('default', function(callback) {
+	runSequence(
+		'build',
+		'browser-sync',
+		'watch',
+		callback
+	);
+});
 /* ================================ */
 
 /* ======== ОЧИСТКА КЭША ========== */
