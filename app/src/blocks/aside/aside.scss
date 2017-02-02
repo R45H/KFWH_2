@@ -3,27 +3,31 @@
 	top: 0;
 	height: 100%;
 	background-color: $color-dark;
-	z-index: 5;
+	z-index: 15;
 	transition: $duration ease;
 	width: 80%;
-	padding-top: 0;
+	padding-top: $top-height;
 
 	@include screen-xs() {
 		width: 200px;
 	}
 
+	@include screen-md() {
+		width: 250px;
+	}
+
 	@include screen-lg() {
 		width: 300px;
-		padding-top: $top-height;
 	}
 
 	&__list {
 		display: block;
 		list-style-type: none;
-		padding: 0;
+		padding: 1em 0 0;
 		height: 100%;
 		overflow-x: hidden;
 		overflow-y: auto;
+		border-top: 1px solid $color-darker;
 	}
 
 	&__item {
@@ -33,16 +37,8 @@
 			.aside {
 
 				&__link {
-					border-top: 1px solid $color-darker;
 				}
 			}
-		}
-
-		&_last {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			overflow: hidden;
 		}
 	}
 
@@ -91,6 +87,10 @@
 		width: 0;
 
 		@include screen-xs() {
+			width: 0;
+		}
+
+		@include screen-md() {
 			width: 0;
 		}
 

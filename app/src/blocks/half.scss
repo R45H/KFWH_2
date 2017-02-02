@@ -20,7 +20,7 @@
 
 	&__side {
 		width: 100%;
-		padding: 10% 15%;
+		padding: 6em 15%;
 		background: 50% 50% no-repeat;
 		background-size: cover;
 		position: relative;
@@ -29,7 +29,7 @@
 
 		@include screen-sm() {
 			width: 50%;
-			padding: 7% 9%;
+			padding: 6em 9%;
 		}
 
 		&_gray {

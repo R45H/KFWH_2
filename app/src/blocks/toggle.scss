@@ -19,20 +19,14 @@
 	}
 
 	&__line {
-		@extend %line;
-		height: 2px;
-		width: 13px;
+		display: block;
 		background-color: $color-gray;
-		margin-bottom: 2px;
 		transition: transform $duration ease,
 		background-color $duration ease,
 		opacity $duration / 2 ease;
-
-		@include screen-lg() {
-			height: 5px;
-			margin-bottom: 5px;
-			width: 32px;
-		}
+		height: 5px;
+		margin-bottom: 5px;
+		width: 32px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -40,28 +34,22 @@
 	}
 
 	&__title {
-		margin: 0;
 		position: absolute;
 		left: 100%;
 		top: 50%;
-		transform: translateY(-50%);
-		font-size: 1.5rem;
+		margin: -23px 0 0 0;
+		font-size: 15px;
 		line-height: 3em;
-		height: 30px;
+		height: 46px;
 		color: $color-gray;
 		font-weight: 800;
-		transition: $duration / 4 ease;
+		transition: $duration ease;
 		text-transform: uppercase;
-		padding: 0 10px 0 0;
+		padding: 0 10px;
 		display: inline-block;
 		opacity: 1;
 		visibility: visible;
 		user-select: none;
-
-		@include screen-lg() {
-			height: 45px;
-			padding: 0 10px;
-		}
 
 		&_hidden {
 			opacity: 0;
@@ -71,11 +59,11 @@
 
 	&_fixed {
 		z-index: 20;
-		top: 10px;
-		left: 10px;
+		top: .7em;
+		left: .7em;
 		position: absolute;
 
-		@include screen-xs() {
+		@include screen-sm() {
 			position: fixed;
 		}
 	}
@@ -87,11 +75,7 @@
 			&__line {
 
 				&:first-child {
-					transform: translateY(4px) rotate(-45deg);
-
-					@include screen-lg() {
-						transform: translateY(10px) rotate(-45deg);
-					}
+					transform: translateY(10px) rotate(-45deg);
 				}
 
 				&:nth-child(2) {
@@ -99,11 +83,7 @@
 				}
 
 				&:last-child {
-					transform: translateY(-4px) rotate(45deg);
-
-					@include screen-lg() {
-						transform: translateY(-10px) rotate(45deg);
-					}
+					transform: translateY(-10px) rotate(45deg);
 				}
 			}
 		}

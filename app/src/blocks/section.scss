@@ -57,4 +57,11 @@
 	&_space {
 		margin: 5em 0 3em;
 	}
+
+	&__pad {
+
+		@include screen-sm() {
+			padding: 0 15px;
+		}
+	}
 }
