@@ -1,35 +1,35 @@
 var
-	clMain = 'colored',
-	clText = clMain + '__text',
-	clImg = clMain + '__img',
-	clMoved = clImg + '_moved',
-	clPoint = 500
+	cdMain = 'colored',
+	cdText = cdMain + '__text',
+	cdImg = cdMain + '__img',
+	cdMoved = cdImg + '_moved',
+	cdPoint = 500
 ;
 
-if (window.innerWidth < clPoint) {
-	$('.' + clText).each(function() {
+if (window.innerWidth < cdPoint) {
+	$('.' + cdText).each(function() {
 		$(this)
-			.next('.' + clImg)
+			.next('.' + cdImg)
 			.prependTo(this.parentNode)
-			.addClass(clMoved)
+			.addClass(cdMoved)
 		;
 	});
 }
 
 $(window).on('resize', function() {
-	if (window.innerWidth < clPoint) {
-		$('.' + clText).each(function() {
+	if (window.innerWidth < cdPoint) {
+		$('.' + cdText).each(function() {
 			$(this)
-				.next('.' + clImg)
+				.next('.' + cdImg)
 				.prependTo(this.parentNode)
-				.addClass(clMoved)
+				.addClass(cdMoved)
 			;
 		});
 	} else {
-		$('.' + clMoved).each(function() {
+		$('.' + cdMoved).each(function() {
 			$(this)
 				.appendTo(this.parentNode)
-				.removeClass(clMoved)
+				.removeClass(cdMoved)
 			;
 		});
 	}
