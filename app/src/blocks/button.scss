@@ -7,6 +7,7 @@
 	font-weight: 800;
 	transition: $duration / 2 ease all;
 	font-size: 1.4rem;
+	text-decoration: none;
 
 	@include screen-sm() {
 		font-size: 1.2rem;
@@ -15,6 +16,7 @@
 	&:hover,
 	&:focus {
 		background-color: lighten($color-main, 20%);
+		color: white;
 	}
 
 	&:active {
