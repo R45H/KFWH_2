@@ -41,7 +41,7 @@
 		font-size: 15px;
 		line-height: 3em;
 		height: 46px;
-		color: $color-gray;
+		color: white;
 		font-weight: 800;
 		transition: $duration ease;
 		text-transform: uppercase;
@@ -73,6 +73,7 @@
 		.toggle {
 
 			&__line {
+				background-color: white;
 
 				&:first-child {
 					transform: translateY(10px) rotate(-45deg);

@@ -54,14 +54,26 @@
 		}
 	}
 
-	&_space {
-		margin: 5em 0 3em;
-	}
-
 	&__pad {
 
 		@include screen-sm() {
 			padding: 0 15px;
 		}
+	}
+
+	&__search {
+		margin-top: 3em;
+	}
+
+	&__xxs {
+
+		@include screen-xxs(max) {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	&_space {
+		margin: 5em 0 3em;
 	}
 }

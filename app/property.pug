@@ -1,0 +1,228 @@
+doctype html
+html(lang="ru")
+	head
+		include partials/head
+		title Property | Knight Frank Warehouse
+	body
+		include partials/aside
+		include partials/header
+
+		main.main
+			section.section
+				.owl.owl-carousel
+					.owl__item.owl__item_img_1
+						.owl__content
+							.container
+								h2.owl__title Почему клиенты выбирают Knight Frank для аренды склада класса А?
+								.row
+									.col-md-8.col-lg-6
+										p.owl__descr Knight Frank занимает лидирующие позиции по продажам и аренде в сегменте склады и производственно-складские помещения
+								.row
+									.col-md-3
+										p.owl__sub-descr Самые интересные предложения
+										a.button.button_lg(href="#") Смотреть предложения
+					.owl__item.owl__item_img_2
+						.owl__content
+							.container
+								h2.owl__title Широкий выбор земельных участков под строительство складских и индустриальных объектов
+								a.button.button_lg(href="#") Смотреть предложения
+					.owl__item.owl__item_img_3
+						.owl__content
+							.container
+								h2.owl__title Свыше 40 предложений для проведения тендеров по выбору логистической компании
+								a.button.button_lg(href="#") Смотреть предложения
+
+
+
+			section.section.section_space
+				.container
+					h1.h2.h2_line Складская недвижимость
+					form.search.section__search
+						label.search__label(for="search") Наименование объекта
+						input.input.input_light.search__input#search(type="text" placeholder="Поиск")
+						input.button.search__btn(type="submit" value="Искать")
+
+					form.form-col
+						.row
+
+							.col-xs-6.col-md-4.section__xxs
+								p.form-col__descr Тип сделки
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Тип комплекса
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Направление
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Класс
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Подходит для
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+
+							.col-xs-6.col-md-4.col-md-offset-2.section__xxs
+								p.form-col__descr Расстояние от КАД, км
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Площадь
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Арендная ставка
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+								p.form-col__descr Цена продажи за м
+									sup 2
+								select.select.form-col__select
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+									option(value="Что-то") Что-то
+						input.button.button_lg.form-col__btn(type="submit" value="Найти склады")
+
+			section.section
+				.container-fluid
+					.row.section__simple-flex
+
+						.col-sm-6.colorless
+							a.colorless__text(href="#")
+								.colorless__text-img.colorless__text-img_img_1
+								.colorless__i
+									h4.colorless__title Gorigo
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+							.colorless__img.colorless__img_img_2
+
+						.col-sm-6.colorless
+							a.colorless__text(href="#")
+								.colorless__text-img.colorless__text-img_img_3
+								.colorless__i
+									h4.colorless__title АКМ Логистик 2
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Московское шоссе, 4 км
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+							.colorless__img.colorless__img_img_4
+
+						.col-sm-6.colorless
+							.colorless__img.colorless__img_img_5
+							a.colorless__text(href="#")
+								.colorless__text-img.colorless__text-img_img_6
+								.colorless__i
+									h4.colorless__title Адастра
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Колтушское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+						.col-sm-6.colorless
+							.colorless__img.colorless__img_img_7
+							a.colorless__text(href="#")
+								.colorless__text-img.colorless__text-img_img_8
+								.colorless__i
+									h4.colorless__title А Плюс Парк
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Шушары, Московское шоссе, 4 км
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+
+			section.section
+				.owl.owl-carousel
+					.owl__item.owl__item_img_4
+						.owl__content
+							.container
+								p.num.owl__num 02
+								h2.owl__title Складская и индустриальная недвижимость
+								.row
+									.col-md-3
+										p.owl__sub-descr Самые интересные предложения
+										a.button.button_lg(href="#") Смотреть предложения
+					.owl__item.owl__item_img_4
+						.owl__content
+							.container
+								p.num.owl__num 02
+								h2.owl__title Складская и индустриальная недвижимость
+								.row
+									.col-md-3
+										p.owl__sub-descr Самые интересные предложения
+										a.button.button_lg(href="#") Смотреть предложения
+					.owl__item.owl__item_img_4
+						.owl__content
+							.container
+								p.num.owl__num 02
+								h2.owl__title Складская и индустриальная недвижимость
+								.row
+									.col-md-3
+										p.owl__sub-descr Самые интересные предложения
+										a.button.button_lg(href="#") Смотреть предложения
+
+			section.section
+				.container
+					.row.section__simple-flex.section__pad
+
+						.col-sm-6.colored
+							.colored__img.colored__img_img_1
+							a.colored__text(href="#")
+								p.colored__date 28 ноября 2016
+								h4.colored__title Инвестиции в коммерческую недвижимость европы за год упали на 40,2%
+
+						.col-sm-6.colored
+							.colored__img.colored__img_img_2
+							a.colored__text(href="#")
+								p.colored__date 24 ноября 2016
+								h4.colored__title Количество офисных блоков площадью 20000 м2 сократилось на 40% за два года
+
+						.col-sm-6.colored
+							a.colored__text(href="#")
+								p.colored__date 23 ноября 2016
+								h4.colored__title За 10 лет в москве введено более 10 млн м2 офисных помещений
+							.colored__img.colored__img_img_3
+
+						.col-sm-6.colored
+							a.colored__text(href="#")
+								p.colored__date 18 ноября 2016
+								h4.colored__title Коворкинг для стартапа в среднем обходится на 50% дешевле, чем офис
+							.colored__img.colored__img_img_4
+
+			section.section.section_space
+				.container
+					.row
+						.col-xs-6.col-sm-3.section__stat
+							.stat
+								p.stat__title > 200
+								p.stat__descr Предложений складов класса А
+						.col-xs-6.col-sm-3.section__stat
+							.stat
+								p.stat__title 40
+								p.stat__descr Предложений для проведения тендеров
+						.col-xs-6.col-sm-3.section__stat
+							.stat
+								p.stat__title 625
+								p.stat__descr Довольных клиентов
+						.col-xs-6.col-sm-3.section__stat
+							.stat
+								p.stat__title 125
+								p.stat__descr Реализованных проектов
+
+		include partials/footer

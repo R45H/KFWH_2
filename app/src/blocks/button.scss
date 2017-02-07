@@ -8,6 +8,7 @@
 	transition: $duration / 2 ease all;
 	font-size: 1.4rem;
 	text-decoration: none;
+	display: inline-block;
 
 	@include screen-sm() {
 		font-size: 1.2rem;

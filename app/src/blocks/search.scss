@@ -1,0 +1,46 @@
+.search {
+
+	&__label {
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		color: $color-dark;
+		font-weight: 600;
+		cursor: pointer;
+		user-select: none;
+		display: block;
+		margin-bottom: 15px;
+
+		@include screen-xs() {
+			margin: 0;
+			display: inline-block;
+		}
+	}
+
+	&__input {
+		width: 20em;
+		padding: 5px 10px;
+		margin-right: 10px;
+
+		@include screen-xs() {
+			margin: 0 10px 0 15px;
+		}
+
+		@include screen-sm() {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__btn {
+		font-weight: 600;
+		padding: 5px 10px;
+
+		@include screen-sm() {
+			font-size: 1.6rem;
+		}
+	}
+
+	&::after {
+		@extend %line_red;
+		margin-top: 3em;
+	}
+}

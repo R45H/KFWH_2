@@ -38,4 +38,50 @@
 		color: $color-darker;
 		text-transform: uppercase;
 	}
+
+	&_light {
+		background-color: $color-lighter;
+		color: $color-dark;
+
+		&::-webkit-input-placeholder {
+			color: $color-dark;
+		}
+
+		&::-moz-placeholder {
+			color: $color-dark;
+		}
+
+		&:-moz-placeholder {
+			color: $color-dark;
+		}
+
+		&:-ms-input-placeholder {
+			color: $color-dark;
+		}
+
+		&:hover {
+			background-color: lighten($color-light, 20%);
+		}
+
+		&:focus {
+			background-color: $color-light;
+			color: white;
+
+			&::-webkit-input-placeholder {
+				color: white;
+			}
+
+			&::-moz-placeholder {
+				color: white;
+			}
+
+			&:-moz-placeholder {
+				color: white;
+			}
+
+			&:-ms-input-placeholder {
+				color: white;
+			}
+		}
+	}
 }

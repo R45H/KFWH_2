@@ -60,7 +60,8 @@
 			padding: 2em 2.5em 2.5em;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 
 			.colorless {
 
@@ -69,6 +70,26 @@
 					&::before {
 						background-color: rgba(0, 0, 0, .5);
 					}
+				}
+
+				&__address {
+
+					&::after {
+						background-color: white;
+					}
+				}
+
+				&__more {
+					color: white;
+
+					&::after {
+						background-color: white;
+					}
+				}
+
+				&__class,
+				&__letter {
+					color: white;
 				}
 			}
 		}
@@ -133,6 +154,7 @@
 		&::after {
 			@extend %line_gray;
 			margin-top: .7em;
+			transition: $duration ease;
 		}
 	}
 
@@ -140,6 +162,7 @@
 		font-size: 1.7rem;
 		color: $color-light;
 		margin: 0;
+		transition: $duration ease;
 	}
 
 	&__letter {
@@ -148,16 +171,19 @@
 		color: $color-light;
 		line-height: 1em;
 		margin: 0 0 .3em;
+		transition: $duration ease;
 	}
 
 	&__more {
 		font-size: 1.7rem;
 		font-weight: 800;
 		margin: 0;
+		transition: $duration ease;
 
 		&::after {
 			@extend %line_red;
 			margin-top: .5em;
+			transition: $duration ease;
 		}
 	}
 }

@@ -1,0 +1,28 @@
+.form-col {
+
+	&__descr {
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		color: $color-dark;
+		font-weight: 600;
+		margin: 2em 0;
+	}
+
+	&__select {
+		text-transform: uppercase;
+		color: $color-dark;
+		font-weight: 600;
+		font-size: 1.6rem;
+		display: block;
+		margin: 2em 0;
+		width: 100%;
+
+		@include screen-xs() {
+			width: 20em;
+		}
+	}
+
+	&__btn {
+		margin-top: 3em;
+	}
+}
