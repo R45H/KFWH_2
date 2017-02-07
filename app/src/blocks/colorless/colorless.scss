@@ -93,6 +93,13 @@
 				}
 			}
 		}
+
+		&_full {
+
+			@include screen-xxs() {
+				width: 100%;
+			}
+		}
 	}
 
 	&__text-img {

@@ -39,25 +39,9 @@
 		text-transform: uppercase;
 	}
 
-	&_light {
+	&_inverse {
 		background-color: $color-lighter;
 		color: $color-dark;
-
-		&::-webkit-input-placeholder {
-			color: $color-dark;
-		}
-
-		&::-moz-placeholder {
-			color: $color-dark;
-		}
-
-		&:-moz-placeholder {
-			color: $color-dark;
-		}
-
-		&:-ms-input-placeholder {
-			color: $color-dark;
-		}
 
 		&:hover {
 			background-color: lighten($color-light, 20%);
@@ -82,6 +66,52 @@
 			&:-ms-input-placeholder {
 				color: white;
 			}
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-dark;
+		}
+
+		&::-moz-placeholder {
+			color: $color-dark;
+		}
+
+		&:-moz-placeholder {
+			color: $color-dark;
+		}
+
+		&:-ms-input-placeholder {
+			color: $color-dark;
+		}
+	}
+
+	&_light {
+		background-color: white;
+		color: $color-gray;
+
+		&:hover {
+			background-color: darken($color-lighter, 5%);
+		}
+
+		&:focus {
+			background-color: darken($color-lighter, 10%);
+			color: $color-dark;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-gray;
+		}
+
+		&::-moz-placeholder {
+			color: $color-gray;
+		}
+
+		&:-moz-placeholder {
+			color: $color-gray;
+		}
+
+		&:-ms-input-placeholder {
+			color: $color-gray;
 		}
 	}
 }

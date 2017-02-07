@@ -61,6 +61,13 @@
 		}
 	}
 
+	&__simple-list {
+
+		@include screen-xs() {
+			width: 1px;
+		}
+	}
+
 	&__num {
 		color: $color-light;
 		transition: $duration ease;
@@ -76,6 +83,11 @@
 		color: white;
 		transition: $duration ease;
 		font-size: 1.3rem;
+		white-space: nowrap;
+
+		@include screen-xs() {
+			white-space: normal;
+		}
 
 		@include screen-sm() {
 			font-size: 1.3rem;

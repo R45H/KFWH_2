@@ -1,0 +1,25 @@
+.person {
+
+	&__img {
+		width: 100%;
+		padding-bottom: 100%;
+		background: no-repeat 50%;
+		background-size: cover;
+
+		&_1 {
+			background-image: url($path + 'img/contact.jpg');
+		}
+	}
+
+	&__name {
+
+	}
+
+	&__post {
+
+	}
+
+	&__tel {
+
+	}
+}

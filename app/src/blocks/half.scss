@@ -37,6 +37,10 @@
 			color: white;
 		}
 
+		&_light {
+			background-color: $color-lighter;
+		}
+
 		&_red {
 			background-color: $color-main;
 			color: white;

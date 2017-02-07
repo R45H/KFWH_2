@@ -61,7 +61,7 @@
 
 	&__item {
 		padding: 5px 10px;
-		transition: .2s ease-out background;
+		transition: $duration / 2 ease;
 
 		&:hover {
 			background-color: $color-light;
