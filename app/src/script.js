@@ -4,4 +4,5 @@ $(function() {
 	@@include('blocks/colorless/colorless.js');
 	@@include('blocks/colored/colored.js');
 	@@include('blocks/select/select.js');
+	@@include('blocks/header/header.js');
 });

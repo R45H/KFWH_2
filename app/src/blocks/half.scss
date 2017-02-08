@@ -100,4 +100,19 @@
 		font-weight: 600;
 		margin-bottom: .7em;
 	}
+
+	&_narrow {
+
+		.half {
+			//=====
+
+			&__side {
+				padding: 6em 15%;
+
+				@include screen-sm() {
+					padding: 6em 15%;
+				}
+			}
+		}
+	}
 }
