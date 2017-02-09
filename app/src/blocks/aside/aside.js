@@ -11,7 +11,7 @@ var $body = $('body'); // Ну короче это боди
 var $point = 918; // Брейкпоинт
 
 $(document).on('click', function(e) { // Обрабатываем клик по документу
-	var target = event.target;
+	var target = e.target;
 
 	while (target.tagName != 'BODY') { // Вычисляем элемент, на который кликнули
 		if (target.classList.contains($asideClass)) return; // Если боковое меню, ничего не делаем
@@ -33,6 +33,7 @@ $(document).on('click', function(e) { // Обрабатываем клик по 
 			return; // Выходим из обработчика события
 		}
 		target = target.parentNode; // Всплываем, пока не дойдём до BODY
+		if (!target) return;
 	}
 
 	// На этом этапе мы знаем, что кликнули не на гамбургер и не на боковое меню

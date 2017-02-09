@@ -12,14 +12,24 @@
 	}
 
 	&__name {
+		font-weight: 800;
+		font-size: 2.7rem;
+		margin-bottom: .7em;
 
+		&::after {
+			@extend %line_red;
+			margin-top: .8em;
+		}
 	}
 
 	&__post {
-
+		font-size: 1.6rem;
+		font-weight: 600;
 	}
 
 	&__tel {
-
+		font-size: 2.7rem;
+		font-weight: 800;
+		color: $color-light;
 	}
 }

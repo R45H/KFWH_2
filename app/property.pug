@@ -96,6 +96,11 @@ html(lang="ru")
 									option(value="700000-1000000") 700 000 - 1 000 000
 						input.button.button_lg.form-col__btn(type="submit" value="Найти склады")
 			section.section
+				.map
+					.map__cont#map
+					h2.h2.h2_line.map__title Объект на карте
+					a.button.button_lg.map__button(href="#") Поиск по параметрам
+			section.section
 				.container-fluid
 					.row.section__simple-flex
 
@@ -149,6 +154,57 @@ html(lang="ru")
 
 			section.section.section_space
 				.container
+					h2.h2.h2_line Похожие объекты
+
+				.container-fluid
+					.row.section__simple-flex
+
+						.col-xs-6.col-sm-3.section__xxs.colorless#card-1
+							a.colorless__text.colorless__text_full(href="#")
+								.colorless__text-img.colorless__text-img_img_1
+								.colorless__i
+									h4.colorless__title Gorigo
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+						.col-xs-6.col-sm-3.section__xxs.colorless
+							a.colorless__text.colorless__text_full(href="#")
+								.colorless__text-img.colorless__text-img_img_1
+								.colorless__i
+									h4.colorless__title Gorigo
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+						.col-xs-6.col-sm-3.section__xxs.colorless
+							a.colorless__text.colorless__text_full(href="#")
+								.colorless__text-img.colorless__text-img_img_1
+								.colorless__i
+									h4.colorless__title Gorigo
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+						.col-xs-6.col-sm-3.section__xxs.colorless
+							a.colorless__text.colorless__text_full(href="#")
+								.colorless__text-img.colorless__text-img_img_1
+								.colorless__i
+									h4.colorless__title Gorigo
+									p.colorless__subtitle Логистический комплекс
+									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
+									p.colorless__class Класс
+									p.colorless__letter А
+									p.colorless__more Узнать больше
+
+				.container
+					input.button.button_lg.section__space-top(type="button" value="Показать ещё")
+
+			section.section.section_space
+				.container
 					h2.h2.h2_line Не нашли подходящий объект?
 					p.section__descr Вы можете
 						br
@@ -159,8 +215,8 @@ html(lang="ru")
 					.half__side.half__side_light
 						h3.h2.h2_line Оставить заявку
 						form.form
-							input.input.input_light.form__input(type="text" placeholder="Имя")
-							input.input.input_light.form__input(type="tel" placeholder="Телефон")
+							input.input.input_light.form__input(type="text" placeholder="Имя" required)
+							input.input.input_light.form__input(type="tel" placeholder="Телефон" required)
 							textarea.input.input_light.form__input(rows="10" placeholder="Интересующий объект недвижимости")
 							input.button.button_lg(type="submit" value="Отправить заявку")
 
