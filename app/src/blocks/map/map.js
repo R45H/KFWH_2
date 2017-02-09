@@ -114,7 +114,7 @@ function initMap() {
 	});
 	/* ======= */
 
-	// Клик по маркеру в каталоге
+	// Клик по маркеру
 	marker1.addListener('click', function() {
 		infowindow.open(map, marker1);
 	});
