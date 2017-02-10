@@ -18,7 +18,12 @@ $('.select').each(function() {
 
 	var $styledSelect = $this.next('.' + $selectClass); // Запихиваем новый селект в переменную
 
-	$styledSelect.text($this.children('option').eq(0).text()); // Записываем в него текст 1-го пункта старого селекта
+	var optionSelected = $this.children('option:selected'); // Записываем в него текст 1-го пункта старого селекта
+	if (optionSelected.length > 0) {
+		$styledSelect.text(optionSelected.text());
+	} else {
+		$styledSelect.text($this.children('option').eq(0).text());
+	}
 
 	var $list = $('<ul />', { // Создаём новый скрытый список селекта
 		'class': $listClass
