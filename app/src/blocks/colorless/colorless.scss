@@ -1,9 +1,44 @@
 .colorless {
 	padding: 0;
 	text-align: left;
+	text-decoration: none;
 
 	@include screen-xxs() {
 		display: flex;
+	}
+
+	&:hover,
+	&:focus {
+
+		.colorless {
+
+			&__text-img {
+
+				&::before {
+					background-color: rgba(0, 0, 0, .5);
+				}
+			}
+
+			&__address {
+
+				&::after {
+					background-color: white;
+				}
+			}
+
+			&__more {
+				color: white;
+
+				&::after {
+					background-color: white;
+				}
+			}
+
+			&__class,
+			&__letter {
+				color: white;
+			}
+		}
 	}
 
 	&__img,
@@ -59,40 +94,6 @@
 
 		@include screen-lg() {
 			padding: 2em 2.5em 2.5em;
-		}
-
-		&:hover,
-		&:focus {
-
-			.colorless {
-
-				&__text-img {
-
-					&::before {
-						background-color: rgba(0, 0, 0, .5);
-					}
-				}
-
-				&__address {
-
-					&::after {
-						background-color: white;
-					}
-				}
-
-				&__more {
-					color: white;
-
-					&::after {
-						background-color: white;
-					}
-				}
-
-				&__class,
-				&__letter {
-					color: white;
-				}
-			}
 		}
 
 		&_full {
