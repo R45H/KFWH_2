@@ -1,13 +1,130 @@
-.object-1 {
-	display:flex;
-	justify-content:space-between;
-	text-transform: uppercase;
-	font-weight: 800;
-	margin-top: 15px;
-	text-align:left;
-	span {
-		&:last-child {
-			color: $color-main;
+.object {
+	color: $color-dark;
+
+	&__address {
+		font-size: 3.3rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 2em;
+	}
+
+	&__col {
+		margin-bottom: 5em;
+	}
+
+	&__h3 {
+		margin-bottom: 25px;
+	}
+
+	&__wrap {
+		margin: 15px 0;
+
+		&::after {
+			@extend %clear;
 		}
+	}
+
+	&__desc {
+		color: $color-dark;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0;
+
+		@include screen-sm() {
+			margin-bottom: 5px;
+		}
+
+		&_half {
+
+			@include screen-sm() {
+				float: left;
+			}
+		}
+
+		&_inline {
+			display: inline-block;
+			margin-right: 15px;
+		}
+	}
+
+	&__val {
+		color: $color-main;
+		font-size: 1.6rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0;
+
+		&_half {
+
+			@include screen-sm() {
+				float: right;
+			}
+		}
+
+		&_inline {
+			display: inline-block;
+		}
+	}
+
+	&__price {
+		color: $color-main;
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 3.3rem;
+		margin-bottom: 15px;
+		line-height: 1.2;
+
+		&_line {
+
+			&::after {
+				@extend %line_red;
+				margin-top: .6em;
+			}
+		}
+
+		&_img_1,
+		&_img_2 {
+			margin: 0;
+			position: relative;
+			padding-left: 2.5em;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background: no-repeat 0 50%;
+				background-size: 70%;
+
+				@include screen-md() {
+					background-size: contain;
+				}
+			}
+		}
+
+		&_img_1 {
+
+			&::before {
+				background-image: url($path + 'img/cargo.png');
+				width: 58px;
+				height: 37px;
+			}
+		}
+
+		&_img_2 {
+
+			&::before {
+				background-image: url($path + 'img/passenger.png');
+				width: 34px;
+				height: 25px;
+			}
+		}
+	}
+
+	&__btn {
+		margin-top: 3em;
 	}
 }
