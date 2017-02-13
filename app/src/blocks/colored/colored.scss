@@ -1,8 +1,21 @@
 .colored {
 	padding: 0;
+	display: block;
+	text-decoration: none;
 
 	@include screen-xxs() {
 		display: flex;
+	}
+
+	&:hover,
+	&:focus {
+
+		.colored {
+
+			&__title {
+				color: $color-main;
+			}
+		}
 	}
 
 	&__img,
@@ -50,17 +63,6 @@
 
 		@include screen-lg() {
 			padding: 2em 2.5em 2.5em;
-		}
-
-		&:hover,
-		&:focus {
-
-			.colored {
-
-				&__title {
-					color: $color-main;
-				}
-			}
 		}
 	}
 

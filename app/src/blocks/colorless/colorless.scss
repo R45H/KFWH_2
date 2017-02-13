@@ -2,6 +2,7 @@
 	padding: 0;
 	text-align: left;
 	text-decoration: none;
+	display: block;
 
 	@include screen-xxs() {
 		display: flex;
