@@ -1,0 +1,13 @@
+.object-1 {
+	display:flex;
+	justify-content:space-between;
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-top: 15px;
+	text-align:left;
+	span {
+		&:last-child {
+			color: $color-main;
+		}
+	}
+}
