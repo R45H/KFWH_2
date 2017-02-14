@@ -54,6 +54,14 @@
 		}
 	}
 
+	&__simple-flex-xxs {
+
+		@include screen-xs() {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
 	&__pad {
 
 		@include screen-sm() {
@@ -97,10 +105,14 @@
 	}
 
 	&_pad {
-		padding: 3em 0 3em;
+		padding: 4em 0 3em;
 	}
 
 	&_red {
 		background-color: $color-main;
+	}
+
+	&_light {
+		background-color: $color-lighter;
 	}
 }
