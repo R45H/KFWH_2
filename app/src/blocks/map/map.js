@@ -1,5 +1,5 @@
 function initMap() {
-	if (!$('#map').length) return;
+	if (!$('.map').length) return;
 
 	var customMapType = new google.maps.StyledMapType([
 		{"elementType": "geometry", "stylers": [{"color": "#f5f5f5"} ] },
@@ -28,22 +28,55 @@ function initMap() {
 
 	/* Точки */
 	var dot1 = {lat: 59.740616, lng: 30.526411};
+	var dot2 = {lat: 59.740616, lng: 30.526411};
+	var dot3 = {lat: 59.740616, lng: 30.526411};
 	/* ===== */
 
-	/* Карта */
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 14,
-		center: dot1,
-		scrollwheel: false,
-		mapTypeControl: false,
-		streetViewControl: false,
-		mapTypeControlOptions: {
-			mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-		}
-	});
+	/* Карты */
+	if (document.getElementById('map1')) {
+		var map1 = new google.maps.Map(document.getElementById('map1'), {
+			zoom: 14,
+			center: dot1,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+		map1.mapTypes.set(customMapTypeId, customMapType);
+		map1.setMapTypeId(customMapTypeId);
+	}
 
-	map.mapTypes.set(customMapTypeId, customMapType);
-	map.setMapTypeId(customMapTypeId);
+	if (document.getElementById('map2')) {
+		var map2 = new google.maps.Map(document.getElementById('map2'), {
+			zoom: 14,
+			center: dot2,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+		map2.mapTypes.set(customMapTypeId, customMapType);
+		map2.setMapTypeId(customMapTypeId);
+	}
+
+	if (document.getElementById('map3')) {
+		var map3 = new google.maps.Map(document.getElementById('map3'), {
+			zoom: 14,
+			center: dot3,
+			scrollwheel: false,
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeControlOptions: {
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+			}
+		});
+		map3.mapTypes.set(customMapTypeId, customMapType);
+		map3.setMapTypeId(customMapTypeId);
+	}
 	/* ===== */
 
 	/* Образец карточки */
@@ -105,17 +138,43 @@ function initMap() {
 	var image = 'img/marker.png';
 
 	/* Маркеры */
-	var marker1 = new google.maps.Marker({
-		position: dot1,
-		map: map,
-		icon: image,
-		title: 'Объект 1',
-		id: 'markerCard-1'
-	});
-	/* ======= */
+	if (document.getElementById('map1')) {
+		var marker1 = new google.maps.Marker({
+			position: dot1,
+			map: map1,
+			icon: image,
+			title: 'Объект 1',
+			id: 'markerCard-1'
+		});
+		marker1.addListener('click', function() {
+			infowindow.open(map1, marker1);
+		});
+	}
 
-	// Клик по маркеру
-	marker1.addListener('click', function() {
-		infowindow.open(map, marker1);
-	});
+	if (document.getElementById('map2')) {
+		var marker2 = new google.maps.Marker({
+			position: dot2,
+			map: map2,
+			icon: image,
+			title: 'Объект 2',
+			id: 'markerCard-2'
+		});
+		marker2.addListener('click', function() {
+			infowindow.open(map2, marker2);
+		});
+	}
+
+	if (document.getElementById('map3')) {
+		var marker3 = new google.maps.Marker({
+			position: dot3,
+			map: map3,
+			icon: image,
+			title: 'Объект 3',
+			id: 'markerCard-3'
+		});
+		marker3.addListener('click', function() {
+			infowindow.open(map3, marker3);
+		});
+	}
+	/* ======= */
 }
