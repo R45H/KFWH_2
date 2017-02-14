@@ -80,7 +80,27 @@
 		font-size: 1.3rem;
 	}
 
+	&__advant {
+
+		@include screen-xxs() {
+			float: left;
+			width: 25%;
+		}
+
+		@include screen-md() {
+			width: 12.5%;
+		}
+	}
+
 	&_space {
 		margin: 5em 0 3em;
+	}
+
+	&_pad {
+		padding: 3em 0 3em;
+	}
+
+	&_red {
+		background-color: $color-main;
 	}
 }

@@ -1,0 +1,62 @@
+.advant {
+	padding: 5px;
+
+	&__img {
+		margin-bottom: 15px;
+		height: 50px;
+		width: 100%;
+		background: no-repeat 50% 100%;
+
+		@include screen-xxs() {
+			background-position: 0 100%;
+		}
+
+		&_1 {
+			@include bgi-retina($path + 'img/advant-1', 'png', 58px, 38px);
+		}
+
+		&_2 {
+			@include bgi-retina($path + 'img/advant-2', 'png', 38px, 36px);
+		}
+
+		&_3 {
+			@include bgi-retina($path + 'img/advant-3', 'png', 40px);
+		}
+
+		&_4 {
+			@include bgi-retina($path + 'img/advant-4', 'png', 51px, 30px);
+		}
+
+		&_5 {
+			@include bgi-retina($path + 'img/advant-5', 'png', 28px, 50px);
+		}
+
+		&_6 {
+			@include bgi-retina($path + 'img/advant-6', 'png', 25px, 48px);
+		}
+
+		&_7 {
+			@include bgi-retina($path + 'img/advant-7', 'png', 36px, 40px);
+		}
+
+		&_8 {
+			@include bgi-retina($path + 'img/advant-8', 'png', 45px, 40px);
+		}
+	}
+
+	&__desc {
+		font-size: 1.5rem;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 600;
+		word-wrap: break-word;
+		margin: 0;
+		text-align: center;
+
+		@include screen-xxs() {
+			font-size: 1.2rem;
+			height: 5.5em;
+			text-align: left;
+		}
+	}
+}
