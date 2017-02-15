@@ -28,10 +28,18 @@
 		bottom: 0;
 	}
 
+	&__inner {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		pointer-events: none;
+	}
+
 	&__title {
 		position: absolute;
 		top: 3%;
-		left: 5%;
+		left: 15px;
 		pointer-events: none;
 
 		@include screen-xs() {
@@ -46,7 +54,8 @@
 	&__button {
 		position: absolute;
 		bottom: 7%;
-		left: 5%;
+		left: 15px;
+		pointer-events: auto;
 	}
 }
 

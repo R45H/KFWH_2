@@ -45,6 +45,10 @@
 						background-color: white;
 					}
 				}
+
+				&__descr {
+					color: white;
+				}
 			}
 		}
 
@@ -83,6 +87,9 @@
 	}
 
 	&__descr {
+		display: block;
+		text-decoration: none;
+		color: $color-dark;
 		font-size: 1.6rem;
 		font-weight: 600;
 		margin-bottom: 1.5em;

@@ -98,8 +98,9 @@ html(lang="ru")
 			section.section
 				.map
 					.map__cont#map1
-					h2.h2.h2_line.map__title Объект на карте
-					a.button.button_lg.map__button(href="#") Поиск по параметрам
+					.container.map__inner
+						h2.h2.h2_line.map__title Объект на карте
+						a.button.button_lg.map__button(href="#") Поиск по параметрам
 			section.section
 				.container-fluid
 					.row.section__simple-flex
@@ -216,8 +217,10 @@ html(lang="ru")
 						h3.h2.h2_line Оставить заявку
 						form.form
 							input.input.input_light.form__input(type="text" placeholder="Имя" required)
+							input.input.input_light.form__input(type="text" placeholder="Компания" required)
 							input.input.input_light.form__input(type="tel" placeholder="Телефон" required)
-							textarea.input.input_light.form__input(rows="10" placeholder="Интересующий объект недвижимости")
+							input.input.input_light.form__input(type="email" placeholder="Почта" required)
+							textarea.input.input_light.form__input(rows="5" placeholder="Сообщение")
 							input.button.button_lg(type="submit" value="Отправить заявку")
 
 					.half__side.half__side_gray
@@ -300,3 +303,5 @@ html(lang="ru")
 
 
 		include partials/footer
+		// END OF VISIBLE CONTENT
+		include partials/modal

@@ -1,0 +1,98 @@
+.sign {
+
+	&__wrap {
+		background-color: $color-lighter;
+		margin: 0;
+		width: auto;
+
+		@include screen-xs() {
+			margin: 30px auto;
+			width: 350px;
+		}
+
+		@include screen-sm() {
+			width: 400px;
+		}
+
+		@include screen-md() {
+			width: 450px;
+		}
+
+		@include screen-lg() {
+			width: 500px;
+		}
+	}
+
+	&__header {
+		padding: 0 4em 0 2em;
+		border-bottom: 1px solid white;
+		position: relative;
+		overflow: auto;
+
+		@include screen-xs() {
+			padding: 0 4.5em;
+		}
+	}
+
+	&__body {
+		padding: 2em 2em .5em;
+
+		@include screen-xs() {
+			padding: 2.5em 4.5em;
+		}
+	}
+
+	&__descr {
+		margin: 1.6em 0 1.3em;
+		color: $color-dark;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+	&__form {
+		margin-bottom: 1.3em;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 4em;
+		cursor: pointer;
+		transition: .3s ease;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			right: 10%;
+			height: 2px;
+			margin-top: -1px;
+			background-color: $color-dark;
+			transition: $duration ease;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:hover,
+		&:focus {
+
+			&::before,
+			&::after {
+				background-color: $color-main;
+				box-shadow: 0 0 3px $color-main;
+			}
+		}
+	}
+}

@@ -90,7 +90,7 @@ html(lang="ru")
 								p.object__desc аренда парковочного места
 								p.object__price.object__price_img_1 5 000 р/место
 								p.object__price.object__price_img_2 7 000 р/место
-								a.button.button_lg.object__btn(href="#") оставить заявку
+								a.button.button_lg.object__btn(href="#" data-toggle="modal" data-target=".sign") оставить заявку
 
 			section.section
 				.owl.owl-carousel
@@ -157,7 +157,6 @@ html(lang="ru")
 						p.half__descr.half__descr_half Юг
 						p.half__descr.half__descr_half Безопасность
 						p.half__descr.half__descr_half Собственная служба
-						a.button.button_lg(href="#") Подробнее
 
 			section.section.section_pad.section_red
 				.container
@@ -246,7 +245,6 @@ html(lang="ru")
 										p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
 										p.colorless__class Класс
 										p.colorless__letter А
-										p.colorless__more Узнать больше
 						.col-xs-6.col-md-7.desc__col
 							p.desc__text Расположен в элитном коттеджном поселке "Золотые Пески" на первой линии финского залива. Прямо с участка выход на песчаный пляж залива. Инженерная инфраструктура включает в себя: электроснабжение, централизованное водоснабжение из артезианских скважин, магистральное газоснабжение. Управляющей компанией осуществляется охрана территории, вывоз мусора, содержание (чистка) дорог, обслуживание водомерного узла, обслуживание электросетей, освещение территории поселка. Собственность! Земли населенных пунктов. Для ведения дачного хозяйства.
 
@@ -256,8 +254,9 @@ html(lang="ru")
 			section.section
 				.map
 					.map__cont#map2
-					h2.h2.h2_line.map__title Объект на карте
-					a.button.button_lg.map__button(href="#") Поиск по параметрам
+					.container.map__inner
+						h2.h2.h2_line.map__title Объект на карте
+						a.button.button_lg.map__button(href="#") Поиск по параметрам
 
 			section.section.section_space
 				.container
@@ -365,8 +364,9 @@ html(lang="ru")
 			section.section
 				.map
 					.map__cont#map3
-					h2.h2.h2_line.map__title Объекты поблизости
-					a.button.button_lg.map__button(href="#") Поиск по параметрам
+					.container.map__inner
+						h2.h2.h2_line.map__title Объекты поблизости
+						a.button.button_lg.map__button(href="#") Поиск по параметрам
 
 			section.section.section_space
 				.container
@@ -381,8 +381,10 @@ html(lang="ru")
 						h3.h2.h2_line Оставить заявку
 						form.form
 							input.input.input_light.form__input(type="text" placeholder="Имя" required)
+							input.input.input_light.form__input(type="text" placeholder="Компания" required)
 							input.input.input_light.form__input(type="tel" placeholder="Телефон" required)
-							textarea.input.input_light.form__input(rows="10" placeholder="Интересующий объект недвижимости")
+							input.input.input_light.form__input(type="email" placeholder="Почта" required)
+							textarea.input.input_light.form__input(rows="5" placeholder="Сообщение")
 							input.button.button_lg(type="submit" value="Отправить заявку")
 
 					.half__side.half__side_gray
@@ -413,3 +415,5 @@ html(lang="ru")
 
 
 		include partials/footer
+		// END OF VISIBLE CONTENT
+		include partials/modal
