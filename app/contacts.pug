@@ -1,0 +1,25 @@
+doctype html
+html(lang="ru")
+	head
+		include partials/head
+		title Contacts | Knight Frank Warehouse
+	body
+		include partials/aside
+		include partials/header
+
+		main.main
+			section.section
+				.half
+					.half__side.half__side_gray
+						h3.h2.h2_line.half__h2 Контакты
+						p.half__author 191025 Санкт-Петербург, ул. Маяковского, 3б, лит. а, БЦ «Alia Tempora»
+						p.half__author +7 (812) 363-22-22
+						p.half__author spb@ru.knightfrank.com
+
+					.half__side.half__side_pad_zero
+						.map.half__map
+							.map__cont#map3
+
+		include partials/footer
+		// END OF VISIBLE CONTENT
+		include partials/modal

@@ -65,7 +65,7 @@ function initMap() {
 
 	if (document.getElementById('map3')) {
 		var map3 = new google.maps.Map(document.getElementById('map3'), {
-			zoom: 14,
+			zoom: 12,
 			center: dot3,
 			scrollwheel: false,
 			mapTypeControl: false,
@@ -169,8 +169,8 @@ function initMap() {
 			position: dot3,
 			map: map3,
 			icon: image,
-			title: 'Объект 3',
-			id: 'markerCard-3'
+			title: 'Контакты',
+			id: 'contacts'
 		});
 		marker3.addListener('click', function() {
 			infowindow.open(map3, marker3);
