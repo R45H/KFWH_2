@@ -1,7 +1,12 @@
 var
 	sign = $('.sign'), // Модальное окно
-	$input = 'form__input' // Класс инпута
+	$input = 'form__input', // Класс инпута
+	$header = $('.header')
 ;
+
+sign.on('show.bs.modal', function() {
+	$header.css('padding-right', '17px');
+});
 
 sign.on('shown.bs.modal', function() { // Фокус при открытии модалки
 	$(this)
@@ -15,4 +20,5 @@ sign.on('hidden.bs.modal', function() { // При закрытии модалк�
 		.find('.' + $input)
 		.val('')
 	;
+	$header.css('padding-right', '0');
 });
