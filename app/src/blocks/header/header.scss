@@ -68,12 +68,16 @@
 	}
 
 	&__col {
+		font-size: 1.1rem;
 
 		&_upper {
 
 			@include screen-xs() {
 				margin-top: -1em;
-				font-size: 1.1rem;
+			}
+
+			@include screen-md() {
+				margin-top: 7px;
 			}
 		}
 	}

@@ -2,7 +2,7 @@ doctype html
 html(lang="ru")
 	head
 		include partials/head
-		title Property | Knight Frank Warehouse
+		title Object Warehouse | Knight Frank Warehouse
 	body
 		include partials/aside
 		include partials/header
@@ -161,36 +161,60 @@ html(lang="ru")
 			section.section.section_pad.section_red
 				.container
 					h2.h2.h2_white Основные преимущества
-					.advant.section__advant
-						.advant__img.advant__img_1
-						p.advant__desc Парковка для грузового транспорта
-					.advant.section__advant
-						.advant__img.advant__img_2
-						p.advant__desc Доступность общественного транспорта
-					.advant.section__advant
-						.advant__img.advant__img_3
-						p.advant__desc Спринклерная система пожаротушения
-					.advant.section__advant
-						.advant__img.advant__img_4
-						p.advant__desc Офисные помещения с отделкой
-					.advant.section__advant
-						.advant__img.advant__img_5
-						p.advant__desc Современные стеллажные системы
-					.advant.section__advant
-						.advant__img.advant__img_6
-						p.advant__desc Высокая энерговооруженность
-					.advant.section__advant
-						.advant__img.advant__img_7
-						p.advant__desc Точка общественного питания
-					.advant.section__advant
-						.advant__img.advant__img_8
-						p.advant__desc Близость к станции метро
+					.section__advant-wrap
+						.advant.section__advant
+							.advant__img.advant__img_1
+							p.advant__desc Парковка для грузового транспорта
+						.advant.section__advant
+							.advant__img.advant__img_2
+							p.advant__desc Доступность общественного транспорта
+						.advant.section__advant
+							.advant__img.advant__img_3
+							p.advant__desc Спринклерная система пожаротушения
+						.advant.section__advant
+							.advant__img.advant__img_4
+							p.advant__desc Офисные помещения с отделкой
+						.advant.section__advant
+							.advant__img.advant__img_5
+							p.advant__desc Современные стеллажные системы
+						.advant.section__advant
+							.advant__img.advant__img_6
+							p.advant__desc Высокая энерговооруженность
+						.advant.section__advant
+							.advant__img.advant__img_7
+							p.advant__desc Точка общественного питания
+						.advant.section__advant
+							.advant__img.advant__img_8
+							p.advant__desc Близость к станции метро
 			section.section.section_space
 				.container.plan
 					h3.h3 Планировки склада
 
 					.row.plan__row
 						.col-xs-12
+							.rect.plan__rect
+								p.rect__title Свободно
+								.rect__block
+							.rect.plan__rect
+								p.rect__title Занято
+								.rect__block.rect__block_active
+							.rect.plan__rect
+								p.rect__title Корпус
+								a.rect__block(href="#") A1
+								a.rect__block(href="#") A2
+								a.rect__block.rect__block_active(href="#") A3
+								a.rect__block.rect__block_active(href="#") A4
+								a.rect__block.rect__block_active(href="#") A5
+								a.rect__block.rect__block_active(href="#") 1
+								a.rect__block(href="#") 2
+								a.rect__block(href="#") 3
+								.rect__arrow-wrap
+									a.rect__arrow(href="#")
+									.rect__num 12
+							.rect.plan__rect
+								p.rect__title Этаж
+								a.rect__block(href="#") 1
+								a.rect__block(href="#") 2
 
 					.row.plan__row
 						.col-sm-5
@@ -235,7 +259,7 @@ html(lang="ru")
 					h3.h3.desc__title Описание объекта
 
 					.row
-						.col-xs-6.col-md-5.desc__col
+						.col-xs-6.col-md-5.desc__col.desc__col_full
 							.colorless
 								a.colorless__text.colorless__text_full(href="#")
 									.colorless__text-img.colorless__text-img_img_1

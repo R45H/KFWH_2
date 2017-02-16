@@ -7,4 +7,5 @@ $(function() {
 	@@include('blocks/colored/colored.js')
 	@@include('blocks/select/select.js')
 	@@include('blocks/header/header.js')
+	@@include('blocks/sign/sign.js')
 });

@@ -10,6 +10,13 @@
 		@include screen-xs(max) {
 			width: 100%;
 		}
+
+		&_full {
+
+			@include screen-xs(max) {
+				padding: 0;
+			}
+		}
 	}
 
 	&__text {

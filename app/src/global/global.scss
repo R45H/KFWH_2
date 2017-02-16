@@ -47,12 +47,13 @@ textarea {
 }
 
 a {
-	text-decoration: underline;
+	text-decoration: none;
 	transition: $duration ease all;
 
 	&:hover,
 	&:focus {
 		text-decoration: none;
 		color: $color-main;
+		outline: none;
 	}
 }

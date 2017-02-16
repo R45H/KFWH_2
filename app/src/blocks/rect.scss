@@ -1,0 +1,79 @@
+.rect {
+
+	&__title {
+		font-size: 1.6rem;
+		color: $color-dark;
+		font-weight: 600;
+		margin: 0 10px 0 0;
+		text-transform: uppercase;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__block {
+		display: inline-block;
+		background-color: $color-dark;
+		min-width: 45px;
+		min-height: 36px;
+		padding: 4px;
+		vertical-align: middle;
+		font-size: 2.4rem;
+		line-height: 28px;
+		color: white;
+		font-weight: 800;
+		margin: 5px 7px 5px 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&_active {
+			background-color: $color-main;
+		}
+	}
+
+	&__arrow-wrap {
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	&__arrow {
+		display: inline-block;
+		vertical-align: middle;
+		width: 24px;
+		height: 48px;
+		@include bgi-retina($path + 'img/rect-arrow');
+		transition: $duration / 2 ease-out;
+
+		&:hover,
+		&:focus {
+			transform: scale(1.10);
+		}
+
+		&:active {
+			transform: scale(.90);
+		}
+	}
+
+	&__num {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 2.4rem;
+		line-height: 28px;
+		color: $color-dark;
+		font-weight: 800;
+		margin-left: 10px;
+	}
+}
+
+a.rect {
+
+	&__block {
+
+		&:hover,
+		&:focus {
+			color: white;
+			background-color: $color-main;
+		}
+	}
+}

@@ -4,21 +4,13 @@
 
 	&__row {
 		display: block;
-		transition: $duration / 2 ease;
 		margin-bottom: 3px;
-		outline: 3px solid transparent;
 
 		&::after {
 			@extend %clear;
 		}
 
-		&:not(:first-child) {
-
-			&:hover {
-				outline: 3px solid $color-main;
-			}
-		}
-
+		&:hover,
 		&_active {
 
 			.vacant {
@@ -33,6 +25,10 @@
 					}
 				}
 			}
+		}
+		
+		&:active {
+			transform: scale(.98);
 		}
 	}
 
@@ -51,6 +47,7 @@
 		padding: 10px 15px;
 		float: left;
 		width: 50%;
+		transition: $duration / 2 ease-out;
 
 		&:first-child {
 			background-color: $color-lighter;

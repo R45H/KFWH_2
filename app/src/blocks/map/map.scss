@@ -30,10 +30,16 @@
 
 	&__inner {
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 0;
+		right: 0;
 		height: 100%;
 		pointer-events: none;
+
+		@include screen-sm() {
+			left: 50%;
+			right: initial;
+			transform: translateX(-50%);
+		}
 	}
 
 	&__title {
