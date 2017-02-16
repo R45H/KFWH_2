@@ -4,6 +4,7 @@
 	text-transform: uppercase;
 	position: relative;
 	margin: 0;
+	color: $color-dark;
 
 	&::after {
 		@extend %line_red;
