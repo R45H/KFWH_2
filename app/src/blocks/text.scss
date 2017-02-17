@@ -34,11 +34,8 @@
 				background-color: $color-main;
 				position: absolute;
 				left: 0;
-				top: .5em;
-
-				@include screen-md() {
-					top: .6em;
-				}
+				top: 1em;
+				transform: translateY(-100%);
 			}
 		}
 	}
