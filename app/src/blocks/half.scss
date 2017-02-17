@@ -53,6 +53,10 @@
 
 				&__descr {
 					color: white;
+
+					&::after {
+						background-color: white;
+					}
 				}
 			}
 		}
@@ -97,6 +101,14 @@
 
 	&__h3 {
 		margin-bottom: 2em;
+
+		&_line_none {
+			margin-bottom: .5em;
+
+			&::after {
+				display: none;
+			}
+		}
 	}
 
 	&__descr {
@@ -120,6 +132,15 @@
 				@include screen-xxs(max) {
 					margin-bottom: 0;
 				}
+			}
+		}
+
+		&_line {
+			margin-bottom: 3em;
+
+			&::after {
+				@extend %line_red;
+				margin-top: 1.5em;
 			}
 		}
 
