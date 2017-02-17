@@ -1,0 +1,57 @@
+doctype html
+html(lang="ru")
+	head
+		include partials/head
+		title Главная | Knight Frank Warehouse
+	body
+		include partials/aside
+		include partials/header
+
+		main.main
+			section.section.section_space
+				.container
+					h1.h2.h2_line Аналитические отчёты
+					select.select.select_space
+						option(value="дата_публикации") По дате публикации
+						option(value="наименование") По наименованию
+
+					.row.section__simple-flex.section__pad.section__space-top
+						.col-sm-6.article
+							.article__img.article__img_img_1
+							.article__text
+								p.article__date 28 ноября 2016
+								.article__wrap
+									h4.article__title Отчет по складской недвижимости IV кв.
+									p.article__desc Аналитический отчет от специалистов компании Knight Frank
+								a.article__button(href="#") Скачать отчёт
+
+						.col-sm-6.article
+							.article__img.article__img_img_2
+							.article__text
+								p.article__date 24 ноября 2016
+								.article__wrap
+									h4.article__title Отчет по складской недвижимости II кв.
+									p.article__desc Аналитический отчет от специалистов компании Knight Frank
+								a.article__button(href="#") Скачать отчёт
+
+						.col-sm-6.article
+							.article__text
+								p.article__date 23 ноября 2016
+								.article__wrap
+									h4.article__title Отчет по складской недвижимости I кв.
+									p.article__desc Аналитический отчет от специалистов компании Knight Frank
+								a.article__button(href="#") Скачать отчёт
+							.article__img.article__img_img_3
+
+						.col-sm-6.article
+							.article__text
+								p.article__date 18 ноября 2016
+								.article__wrap
+									h4.article__title Отчет по складской недвижимости IV кв.
+									p.article__desc Аналитический отчет от специалистов компании Knight Frank
+								a.article__button(href="#") Скачать отчёт
+							.article__img.article__img_img_4
+
+		include partials/footer
+		// END OF VISIBLE CONTENT
+		include partials/modal

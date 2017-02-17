@@ -8,4 +8,5 @@ $(function() {
 	@@include('blocks/select/select.js')
 	@@include('blocks/header/header.js')
 	@@include('blocks/sign/sign.js')
+	@@include('blocks/article/article.js')
 });

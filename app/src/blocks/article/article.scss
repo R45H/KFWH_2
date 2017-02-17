@@ -1,0 +1,113 @@
+.article {
+	padding: 0;
+	display: block;
+	text-decoration: none;
+
+	@include screen-xxs() {
+		display: flex;
+	}
+
+	&__img,
+	&__text {
+
+		@include screen-xxs() {
+			width: 50%;
+		}
+	}
+
+	&__img {
+		padding-bottom: 75%;
+		background: no-repeat 50% 50%;
+		background-size: cover;
+
+		@include screen-xxs() {
+			padding-bottom: 35%;
+		}
+
+		@include screen-sm() {
+			padding-bottom: 0;
+		}
+
+		&_img_1 {
+			background-image: url($path + 'img/colored-1.jpg');
+		}
+
+		&_img_2 {
+			background-image: url($path + 'img/colored-2.jpg');
+		}
+
+		&_img_3 {
+			background-image: url($path + 'img/colored-3.jpg');
+		}
+
+		&_img_4 {
+			background-image: url($path + 'img/colored-4.jpg');
+		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__date,
+	&__button {
+		font-size: 1.2rem;
+		color: $color-dark;
+		background-color: $color-lighter;
+		padding: 10px 20px;
+		font-weight: 800;
+	}
+
+	&__date {
+		margin: 0 0 1em 0;
+	}
+
+	&__button {
+		display: block;
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-left: 45px;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			margin-top: -7px;
+			background: url($path + 'img/download.svg') no-repeat 0 50%;
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&__wrap {
+		padding: 10px 20px 50px;
+	}
+
+	&__title {
+		color: $color-dark;
+		font-size: 1.9rem;
+		margin: 0 0 1em;
+		line-height: 1.4em;
+		font-weight: 800;
+		transition: $duration ease;
+
+		&::after {
+			@extend %line_red;
+			margin-top: 1em;
+		}
+	}
+
+	&__desc {
+		font-weight: bold;
+		font-size: 1.3rem;
+		color: $color-light;
+		line-height: 1.8;
+	}
+}
