@@ -167,6 +167,10 @@
 			margin-top: .7em;
 			transition: $duration ease;
 		}
+
+		&_bottom {
+			margin-bottom: 45px;
+		}
 	}
 
 	&__class {
