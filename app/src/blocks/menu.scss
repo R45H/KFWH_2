@@ -6,10 +6,37 @@
 	&__item {
 		list-style-type: none;
 		display: inline-block;
-		margin-right: 2.7em;
+		margin-right: 1em;
+
+		@include screen-lg() {
+			margin-right: 2.3em;
+		}
 
 		&:last-child {
 			margin-right: 0;
+		}
+
+		&_active {
+
+			.menu {
+
+				&__link {
+					color: $color-main;
+
+					&_search,
+					&_shortlist,
+					&_compare {
+
+						&::before {
+							opacity: 0;
+						}
+
+						&::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -61,6 +88,67 @@
 				&::after {
 					opacity: 1;
 				}
+			}
+		}
+
+		&_shortlist,
+		&_compare {
+			position: relative;
+
+			&::before,
+			&::after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				height: 22px;
+				left: 0;
+				top: 50%;
+				margin-top: -11px;
+				transition: $duration ease;
+			}
+
+			&:hover,
+			&:focus {
+
+				&::before {
+					opacity: 0;
+				}
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&_shortlist {
+			margin-right: 23px;
+
+			&::before {
+				width: 23px;
+				@include bgi-retina($path + 'img/shortlist');
+				opacity: 1;
+			}
+
+			&::after {
+				width: 23px;
+				@include bgi-retina($path + 'img/shortlist-active');
+				opacity: 0;
+			}
+		}
+
+		&_compare {
+			margin-right: 22px;
+
+			&::before {
+				width: 22px;
+				@include bgi-retina($path + 'img/compare');
+				opacity: 1;
+			}
+
+			&::after {
+				width: 22px;
+				@include bgi-retina($path + 'img/compare-active');
+				opacity: 0;
 			}
 		}
 	}

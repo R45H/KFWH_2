@@ -7,6 +7,7 @@
 	transition: $duration ease;
 	width: 80%;
 	padding-top: $top-height;
+	box-shadow: 0 0 5px $color-darker;
 
 	@include screen-xs() {
 		width: 200px;
