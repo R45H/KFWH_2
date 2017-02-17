@@ -1,0 +1,45 @@
+.text {
+	color: $color-dark;
+	font-size: 1.9rem;
+
+	p {
+		margin-bottom: 15px;
+		text-align: justify;
+	}
+
+	a {
+		color: $color-main;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: inherit;
+		}
+	}
+
+	ul {
+		padding: 0;
+		margin-bottom: 15px;
+
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-left: 15px;
+			margin-bottom: 5px;
+
+			&::before {
+				content: '';
+				width: 6px;
+				height: 6px;
+				background-color: $color-main;
+				position: absolute;
+				left: 0;
+				top: .5em;
+
+				@include screen-md() {
+					top: .6em;
+				}
+			}
+		}
+	}
+}
