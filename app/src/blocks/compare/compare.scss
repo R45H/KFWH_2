@@ -1,4 +1,5 @@
 .compare {
+	outline: none;
 	overflow: auto;
 
 	table {
@@ -6,6 +7,7 @@
 		white-space: nowrap;
 		border-collapse: separate;
 		border-spacing: 0 5px;
+		margin-top: 50px;
 	}
 
 	tr {
@@ -52,4 +54,31 @@
 			color: white;
 		}
 	}
+
+	// Стилизация ползунка
+
+	.jspHorizontalBar {
+		background-color: transparent;
+		top: 0;
+	}
+
+	.jspTrack {
+		height: 2px;
+		margin-top: 7px;
+		background-color: $color-lighter;
+	}
+
+	.jspDrag {
+		height: 17px;
+		margin-top: -7px;
+		background-color: $color-gray;
+		transition: $duration / 2 ease background;
+
+		&:hover,
+		&:active {
+			background-color: $color-dark;
+		}
+	}
+
+	// ===================
 }
