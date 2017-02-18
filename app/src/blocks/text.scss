@@ -9,10 +9,11 @@
 
 	a {
 		color: $color-main;
+		border-bottom: 1px solid transparent;
 
 		&:hover,
 		&:focus {
-			text-decoration: underline;
+			border-bottom-color: inherit;
 			color: inherit;
 		}
 	}
@@ -24,7 +25,7 @@
 		li {
 			list-style-type: none;
 			position: relative;
-			padding-left: 15px;
+			padding-left: 20px;
 			margin-bottom: 5px;
 
 			&::before {
