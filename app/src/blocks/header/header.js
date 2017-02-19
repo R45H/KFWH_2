@@ -21,3 +21,11 @@ $(window).on('resize', function() {
 			.remove();
 	}
 });
+
+// Открытие бокового меню при клике на пункт меню
+if($(".toggleLeftMenu").length > 0){
+	$(".toggleLeftMenu").on("click", function(){
+		$(".toggle").trigger("click");
+		return false;
+	});
+}

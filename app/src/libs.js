@@ -5,6 +5,7 @@
 @@include('../libs/jScrollPane/script/jquery.jscrollpane.js')
 
 @@include('../libs/jquery-ui/ui/version.js')
+@@include('../libs/jquery-ui/ui/safe-active-element.js')
 @@include('../libs/jquery-ui/ui/escape-selector.js')
 @@include('../libs/jquery-ui/ui/form.js')
 @@include('../libs/jquery-ui/ui/widget.js')

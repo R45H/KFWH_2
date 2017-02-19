@@ -74,7 +74,10 @@
 		background-color: $color-gray;
 		transition: $duration / 2 ease background;
 
-		&:hover,
+		&:hover {
+			background-color: lighten($color-dark, 10%);
+		}
+
 		&:active {
 			background-color: $color-dark;
 		}

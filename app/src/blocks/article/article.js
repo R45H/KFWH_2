@@ -1,35 +1,35 @@
 var
-	cdMain = 'article',
-	cdText = cdMain + '__text',
-	cdImg = cdMain + '__img',
-	cdMoved = cdImg + '_moved',
-	cdPoint = 500
+	arMain = 'article',
+	arText = arMain + '__text',
+	arImg = arMain + '__img',
+	arMoved = arImg + '_moved',
+	arPoint = 500
 ;
 
-if (window.innerWidth < cdPoint) {
-	$('.' + cdText).each(function() {
+if (window.innerWidth < arPoint) {
+	$('.' + arText).each(function() {
 		$(this)
-			.next('.' + cdImg)
+			.next('.' + arImg)
 			.prependTo(this.parentNode)
-			.addClass(cdMoved)
+			.addClass(arMoved)
 		;
 	});
 }
 
 $(window).on('resize', function() {
-	if (window.innerWidth < cdPoint) {
-		$('.' + cdText).each(function() {
+	if (window.innerWidth < arPoint) {
+		$('.' + arText).each(function() {
 			$(this)
-				.next('.' + cdImg)
+				.next('.' + arImg)
 				.prependTo(this.parentNode)
-				.addClass(cdMoved)
+				.addClass(arMoved)
 			;
 		});
 	} else {
-		$('.' + cdMoved).each(function() {
+		$('.' + arMoved).each(function() {
 			$(this)
 				.appendTo(this.parentNode)
-				.removeClass(cdMoved)
+				.removeClass(arMoved)
 			;
 		});
 	}

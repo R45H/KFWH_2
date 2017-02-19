@@ -7,7 +7,7 @@ var $toggleClass = 'toggle'; // Класс гамбургера
 var $toggleActive = 'toggle_active'; // Переключатель активности гамбургера
 var $toggleTitle = $('.toggle .toggle__title'); // Заголовок гамбургера
 var $toggleTitleHidden = 'toggle__title_hidden'; // Переключатель видимости заголовка гамбургера
-var $body = $('body'); // Ну короче это боди
+var $body = $('body'); // Body
 var $point = 918; // Брейкпоинт
 
 $(document).on('click', function(e) { // Обрабатываем клик по документу
