@@ -1,13 +1,12 @@
 .select {
-	cursor: pointer;
-	user-select: none;
-	display: inline-block;
-	position: relative;
 
 	&__current {
+		outline: none;
 		padding: 5px 2.5em 5px 10px;
-		transition: .2s ease;
+		transition: $duration ease;
 		background-color: $color-lighter;
+		text-transform: uppercase;
+		font-weight: 600;
 
 		&::after {
 			content: '';
@@ -30,8 +29,6 @@
 
 		&_active {
 			background-color: $color-main;
-			border-color: $color-dark;
-			color: white;
 
 			&::after {
 				transform: translateX(-50%) translateY(-50%) rotate(180deg);
@@ -42,30 +39,50 @@
 			&:focus {
 				background-color: $color-main;
 			}
+
+			.select__text {
+				color: white;
+			}
+		}
+
+		&.ui-button {
+			width: auto;
 		}
 	}
 
-	&__list {
-		display: none;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		left: 0;
-		padding: 0;
-		list-style-type: none;
-		background-color: $color-lighter;
-		border: 1px solid $color-light;
-		border-top: none;
-		z-index: 1;
+	&__text {
+		margin: 0;
+		line-height: 1.42857143;
+		color: $color-dark;
+		transition: $duration ease;
 	}
 
-	&__item {
-		padding: 5px 10px;
-		transition: $duration / 2 ease;
+	&__list {
+		background-color: $color-lighter;
+		z-index: 1;
+		border: 0;
+		color: $color-dark;
+		font-weight: 600;
+		font-size: 1.6rem;
+		font-family: $font-main;
+		text-transform: uppercase;
 
-		&:hover {
-			background-color: $color-light;
-			color: white;
+		.ui-menu {
+			list-style-type: none;
+			padding: 0;
+			border: 1px solid $color-light;
+			border-top: none;
+		}
+
+		.ui-menu-item-wrapper {
+			padding: 5px 10px;
+			transition: $duration / 2 ease;
+			cursor: pointer;
+
+			&.ui-state-active {
+				background-color: $color-light;
+				color: white;
+			}
 		}
 	}
 
