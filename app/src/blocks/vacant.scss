@@ -26,9 +26,12 @@
 				}
 			}
 		}
-		
-		&:active {
-			transform: scale(.98);
+
+		&:not(:first-child) {
+
+			&:active {
+				transform: scale(.98);
+			}
 		}
 	}
 

@@ -103,6 +103,18 @@
 				width: 100%;
 			}
 		}
+
+		&_empty {
+			padding: 0 0 80%;
+
+			@include screen-xs() {
+				padding: 0 0 80%;
+			}
+
+			@include screen-lg() {
+				padding: 0 0 80%;
+			}
+		}
 	}
 
 	&__text-img {
