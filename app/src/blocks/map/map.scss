@@ -71,3 +71,19 @@
 	transform: translateX(-50%);
 	text-align: center;
 }
+
+.gmb_close {
+	background: url('../img/closeX_red.png') no-repeat;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	z-index: 1;
+	cursor: pointer;
+	transition: $duration ease;
+
+	&:hover {
+		background-image: url('../img/closeX_red_hover.png');
+	}
+}

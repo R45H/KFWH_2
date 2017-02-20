@@ -24,7 +24,6 @@
 
 	table {
 		width: 100%;
-		white-space: nowrap;
 		border-collapse: separate;
 		border-spacing: 0 5px;
 		margin-top: 50px;
@@ -38,10 +37,21 @@
 		font-weight: 600;
 		padding: 5px 15px;
 		margin-bottom: 5px;
+		vertical-align: top;
+		min-width: 250px;
 
 		&:first-child {
 			background-color: $color-dark;
 			color: white;
+		}
+	}
+
+	a {
+		color: $color-dark;
+
+		&:hover,
+		&:focus {
+			color: $color-main;
 		}
 	}
 

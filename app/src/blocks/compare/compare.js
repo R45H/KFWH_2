@@ -9,6 +9,12 @@ $compare.jScrollPane({ // Инициализация кастомного пол
 
 var $comInner = $compare.find('.jspContainer'); // Внутренний контейнер
 
-$(window).on('resize', function() { // Поправляем высоту при ресайзе
+setTimeout(function() {
 	$comInner.css('height', parseInt($comTable.css('height')) + 50);
+}, 200);
+
+$(window).on('resize', function() { // Поправляем высоту при ресайзе
+	setTimeout(function() {
+		$comInner.css('height', parseInt($comTable.css('height')) + 50);
+	}, 200);
 });
