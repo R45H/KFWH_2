@@ -2,42 +2,32 @@
 	outline: none;
 	overflow: auto;
 
+	&__close {
+		display: inline-block;
+		background-color: transparent;
+		border: none;
+		outline: none;
+
+		&::after {
+			content: 'X';
+			color: $color-dark;
+			transition: $duration / 2 ease;
+		}
+
+		&:hover {
+
+			&::after {
+				color: $color-main;
+			}
+		}
+	}
+
 	table {
 		width: 100%;
 		white-space: nowrap;
 		border-collapse: separate;
 		border-spacing: 0 5px;
 		margin-top: 50px;
-	}
-
-	tr {
-
-		&:first-child {
-
-			td {
-				position: relative;
-
-				a {
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					padding: 5px 15px;
-					color: $color-dark;
-
-					&:hover {
-						color: $color-main;
-					}
-
-					&::after {
-						content: 'X';
-						margin-left: 10px;
-						color: $color-main;
-					}
-				}
-			}
-		}
 	}
 
 	td {
