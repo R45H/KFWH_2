@@ -1,5 +1,6 @@
 .half {
 	position: relative;
+	overflow: hidden;
 
 	@include screen-sm() {
 		display: flex;
