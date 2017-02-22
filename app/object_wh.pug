@@ -2,7 +2,7 @@ doctype html
 html(lang="ru")
 	head
 		include partials/head
-		title Страница земельного участка | Knight Frank Warehouse
+		title Страница объекта | Knight Frank Warehouse
 	body
 		include partials/aside
 		include partials/header
@@ -13,14 +13,14 @@ html(lang="ru")
 					.owl__item.owl__item_img_1
 						.owl__content
 							.container
-								h2.owl__title Почему клиенты выбирают Knight Frank для аренды склада класса А?
+								h2.owl__title складской комплекс «акм логистик 2»
 								.row
 									.col-md-8.col-lg-6
-										p.owl__descr Knight Frank занимает лидирующие позиции по продажам и аренде в сегменте склады и производственно-складские помещения
+										p.owl__descr поселок шушары, первая линия московского шоссе
 								.row
-									.col-md-3
-										p.owl__sub-descr Самые интересные предложения
-										a.button.button_lg(href="#") Смотреть предложения
+									.col-md-12
+										h3.h2.h2_white 1000 - 25 000 М2
+										a.button.button_lg(href="#plan") Посмотреть план
 					.owl__item.owl__item_img_2
 						.owl__content
 							.container
@@ -92,19 +92,20 @@ html(lang="ru")
 								p.object__price.object__price_img_2 7 000 р/место
 								a.button.button_lg.object__btn(href="#" data-toggle="modal" data-target=".sign") оставить заявку
 
+
 			section.section
 				.owl.owl-carousel
 					.owl__item.owl__item_img_1
 						.owl__content
 							.container
-								h2.owl__title складской комплекс «акм логистик 2»
+								h2.owl__title Почему клиенты выбирают Knight Frank для аренды склада класса А?
 								.row
 									.col-md-8.col-lg-6
-										p.owl__descr поселок шушары, первая линия московского шоссе
+										p.owl__descr Knight Frank занимает лидирующие позиции по продажам и аренде в сегменте склады и производственно-складские помещения
 								.row
-									.col-md-12
-										h3.h2.h2_white 1000 - 25 000 М2
-										a.button.button_lg(href="#") Посмотреть план
+									.col-md-3
+										p.owl__sub-descr Самые интересные предложения
+										a.button.button_lg(href="#plan") Смотреть предложения
 					.owl__item.owl__item_img_2
 						.owl__content
 							.container
@@ -186,7 +187,7 @@ html(lang="ru")
 						.advant.section__advant
 							.advant__img.advant__img_8
 							p.advant__desc Близость к станции метро
-			section.section.section_space
+			section.section.section_space#plan
 				.container.plan
 					h3.h3 Планировки склада
 
