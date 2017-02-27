@@ -170,12 +170,12 @@
 	.owl-prev {
 		left: 0;
 		max-width: 53px;
-		@include bgi-retina('../img/prev', 'png', 53px, 129px);
+		@include bgi-retina($path + 'img/prev', 'png', 53px, 129px);
 	}
 
 	.owl-next {
 		right: 0;
 		max-width: 94px;
-		@include bgi-retina('../img/next', 'png', 94px, 129px);
+		@include bgi-retina($path + 'img/next', 'png', 94px, 129px);
 	}
 }
