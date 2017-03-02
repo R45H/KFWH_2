@@ -93,6 +93,13 @@
 		@include screen-sm() {
 			font-size: 1.3rem;
 		}
+
+		&_nowrap {
+
+			@include screen-xs() {
+				white-space: nowrap;
+			}
+		}
 	}
 
 	&_hidden {
