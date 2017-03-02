@@ -47,11 +47,13 @@
 	}
 
 	a {
-		color: $color-dark;
+		color: $color-main;
+		border-bottom: 1px solid transparent;
 
 		&:hover,
 		&:focus {
-			color: $color-main;
+			color: $color-dark;
+			border-bottom: 1px solid $color-dark;
 		}
 	}
 
@@ -71,15 +73,15 @@
 	.jspDrag {
 		height: 17px;
 		margin-top: -7px;
-		background-color: $color-gray;
+		background-color: $color-lighter;
 		transition: $duration / 2 ease background;
 
 		&:hover {
-			background-color: lighten($color-dark, 10%);
+			background-color: darken($color-lighter, 10%);;
 		}
 
 		&:active {
-			background-color: $color-dark;
+			background-color: $color-light;
 		}
 	}
 
