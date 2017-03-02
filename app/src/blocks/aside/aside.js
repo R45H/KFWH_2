@@ -67,8 +67,6 @@ $(window).on('resize', function() { // Обрабатываем ресайз
 	}
 });
 
-//TODO При открытии меню на мобиле и расширении экрана, первая прокрутка колеса не работает
-
 $($asideList).on('mousewheel DOMMouseScroll', function (e) { // Обрабатываем прокрутку колёсиком
 	var e0 = e.originalEvent, // Делаем прокрутку меню, когда указатель мыши на нём
 		delta = e0.wheelDelta || -e0.detail;
