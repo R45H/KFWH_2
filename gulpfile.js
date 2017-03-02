@@ -65,8 +65,7 @@ gulp.task('pug', function () {
 		.pipe(pug({ // Сконвертим в HTML
 			pretty: '\t' // Форматируем с табами вместо пробелов
 		}))
-		.pipe(gulp.dest(dist)) //Выплюнем их
-		.pipe(reload({stream: true})); //Перезагрузим сервер
+		.pipe(gulp.dest(dist)); //Выплюнем их
 });
 /* ================================ */
 
@@ -168,7 +167,7 @@ gulp.task('build', function(callback) {
 
 /* ========= ТАСК "WATCH" ========= */
 gulp.task('watch', function() {
-	gulp.watch(app + '**/*.pug', ['pug']); // Наблюдение за PUG файлами
+	gulp.watch(app + '**/*.pug', ['pug', reload]); // Наблюдение за PUG файлами
 	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['sass']); // Наблюдение за своими SCSS файлами
 	gulp.watch(app + 'src/libs.scss', ['css-libs']); // Наблюдение за скачанными CSS файлами
 	gulp.watch([app + 'src/**/*.js', '!' + app + 'src/libs.js'], ['js']); // Наблюдение за своими JS файлами
