@@ -14,4 +14,11 @@
 	&_space_bot {
 		margin-bottom: 2em;
 	}
+
+	&_line_none {
+
+		&::after {
+			display: none;
+		}
+	}
 }
