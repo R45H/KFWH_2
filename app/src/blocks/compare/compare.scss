@@ -1,7 +1,12 @@
 .compare {
 	outline: none;
-	overflow: auto;
 	position: relative;
+	overflow: hidden;
+
+	&__i {
+		overflow: auto;
+		margin-top: 50px;
+	}
 
 	&__close {
 		display: inline-block;
@@ -23,11 +28,32 @@
 		}
 	}
 
+	&__titles {
+		display: none;
+
+		@include screen-xs() {
+			display: table;
+			position: absolute;
+			margin-top: 50px;
+			pointer-events: none;
+		}
+
+		td {
+
+			&:first-child {
+				pointer-events: auto;
+			}
+
+			&:not(:first-child) {
+				visibility: hidden;
+			}
+		}
+	}
+
 	table {
 		width: 100%;
 		border-collapse: separate;
 		border-spacing: 0 5px;
-		margin-top: 50px;
 	}
 
 	td {
@@ -64,6 +90,7 @@
 		opacity: 1 !important;
 		height: 2px;
 		top: 7px;
+		left: 0 !important;
 
 		&:hover {
 
