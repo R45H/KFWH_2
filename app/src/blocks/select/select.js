@@ -1,3 +1,4 @@
+/* Кастомные селекты */
 $('.select').selectmenu({
 	classes: {
 		'ui-selectmenu-button': 'select__current', // Кнопка селекта
@@ -11,3 +12,4 @@ $('.select').selectmenu({
 $(window).on('resize', function() {
 	$('.select').selectmenu('close');
 });
+/* ========== */

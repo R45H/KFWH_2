@@ -1,3 +1,4 @@
+/* Слайдеры */
 $('.owl').owlCarousel({
 	items: 1,
 	loop: true,
@@ -7,3 +8,4 @@ $('.owl').owlCarousel({
 	nav: true,
 	navText: ''
 });
+/* ========== */

@@ -1,3 +1,4 @@
+/* Боковое меню */
 var $aside = $('.aside'); // Боковое меню
 var $asideClass = 'aside'; // Класс бокового меню
 var $asideHidden = 'aside_hidden'; // Переключатель видимости бокового меню
@@ -74,3 +75,4 @@ $($asideList).on('mousewheel DOMMouseScroll', function (e) { // Обрабаты
 	this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
 	e.preventDefault();
 });
+/* ========== */
