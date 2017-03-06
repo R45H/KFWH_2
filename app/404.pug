@@ -1,0 +1,19 @@
+doctype html
+html(lang="ru")
+	head
+		include partials/head
+		title Избранное | Knight Frank Warehouse
+	body
+		include partials/aside
+		include partials/header
+
+		main.main
+			section.section
+				.section__item.section__item_red
+					.section__full-center
+						h2.section__404 404
+						p.section__404-desc Страница не найдена
+						a.button.button_lg.button_dark.section__space-top-2x(href="/") На главную
+		include partials/footer
+		// END OF VISIBLE CONTENT
+		include partials/modal

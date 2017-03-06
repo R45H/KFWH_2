@@ -38,6 +38,14 @@
 		text-align: center;
 	}
 
+	&__full-center {
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
 	&__stat {
 		margin-bottom: 2em;
 
@@ -71,6 +79,10 @@
 
 	&__space-top {
 		margin-top: 3em;
+	}
+
+	&__space-top-2x {
+		margin-top: 6em;
 	}
 
 	&__xxs {
@@ -114,6 +126,74 @@
 
 	&__compare {
 		margin: 3em 0;
+	}
+
+	&__item {
+		background: no-repeat 50% 50%;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 110%;
+
+		@include screen-xs() {
+			padding-bottom: 60%;
+		}
+
+		@include screen-sm() {
+			padding-bottom: 50%;
+		}
+
+		@include screen-lg() {
+			padding-bottom: 45%;
+		}
+
+		&_red {
+			background-color: $color-main;
+		}
+	}
+
+	&__content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 2em;
+		bottom: 0;
+
+		@include screen-sm() {
+			top: 5em;
+		}
+	}
+
+	&__404 {
+		font-size: 15rem;
+		margin: 0 0 25px;
+		font-weight: 700;
+		color: white;
+		position: relative;
+
+		&::before {
+
+			@include screen-xs() {
+				content: ':(';
+				font-size: 25rem;
+				white-space: nowrap;
+				position: absolute;
+				top: -20%;
+				right: 125%;
+			}
+		}
+	}
+
+	&__404-desc {
+		font-size: 1.4rem;
+		line-height: 1.7em;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: white;
+		margin: 0;
+
+		@include screen-xs() {
+			font-size: 1.8rem;
+		}
 	}
 
 	&_space {
