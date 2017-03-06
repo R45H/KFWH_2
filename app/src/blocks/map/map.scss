@@ -44,7 +44,7 @@
 
 	&__title {
 		position: absolute;
-		top: 45px;
+		top: 55px;
 		left: 15px;
 		text-shadow: 1px 1px 1px white;
 		pointer-events: none;
@@ -86,5 +86,44 @@
 
 	&:hover {
 		background-image: url('../img/closeX_red_hover.png');
+	}
+}
+
+.gm-style-mtc {
+
+	&:first-child {
+		border-right: 1px solid darken($color-main, 10%);
+	}
+
+	&:last-child {
+		border-left: 1px solid darken($color-main, 10%);
+	}
+
+	div {
+		text-transform: uppercase;
+		border: none;
+		margin: 0;
+		color: white !important;
+		background-color: $color-main !important;
+		box-shadow: none !important;
+		font-weight: 800 !important;
+		padding: 10px 20px !important;
+		font-size: 1.4rem !important;
+		border-radius: 0 !important;
+		transition: $duration / 2 ease all;
+
+		@include screen-sm() {
+			font-size: 1.2rem !important;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken($color-main, 10%) !important;
+		}
+
+		&:active {
+			background-color: darken($color-main, 20%) !important;
+			color: darken(white, 20%) !important;
+		}
 	}
 }
