@@ -39,10 +39,10 @@ function initMap() {
 			zoom: 14,
 			center: dot1,
 			scrollwheel: false,
-			mapTypeControl: false,
+			mapTypeControl: true,
 			streetViewControl: false,
 			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+				mapTypeIds: [customMapTypeId, google.maps.MapTypeId.SATELLITE]
 			}
 		});
 		map1.mapTypes.set(customMapTypeId, customMapType);
@@ -57,7 +57,7 @@ function initMap() {
 			mapTypeControl: false,
 			streetViewControl: false,
 			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+				mapTypeIds: [customMapTypeId, google.maps.MapTypeId.SATELLITE]
 			}
 		});
 		map2.mapTypes.set(customMapTypeId, customMapType);
@@ -72,7 +72,7 @@ function initMap() {
 			mapTypeControl: false,
 			streetViewControl: false,
 			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+				mapTypeIds: [customMapTypeId, google.maps.MapTypeId.SATELLITE]
 			}
 		});
 		map3.mapTypes.set(customMapTypeId, customMapType);

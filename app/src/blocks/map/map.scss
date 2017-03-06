@@ -44,11 +44,12 @@
 
 	&__title {
 		position: absolute;
-		top: 3%;
+		top: 45px;
 		left: 15px;
+		text-shadow: 1px 1px 1px white;
 		pointer-events: none;
 
-		@include screen-xs() {
+		@include screen-sm() {
 			top: 5%;
 		}
 
