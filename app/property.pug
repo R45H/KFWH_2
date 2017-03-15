@@ -8,29 +8,6 @@ html(lang="ru")
 		include partials/header
 
 		main.main
-			section.section
-				.owl.owl-carousel
-					.owl__item.owl__item_img_1
-						.owl__content
-							.container
-								h2.owl__title Почему клиенты выбирают Knight Frank для аренды склада класса А?
-								.row
-									.col-md-8.col-lg-6
-										p.owl__descr Knight Frank занимает лидирующие позиции по продажам и аренде в сегменте склады и производственно-складские помещения
-								.row
-									.col-md-3
-										p.owl__sub-descr Самые интересные предложения
-										a.button.button_lg(href="#") Смотреть предложения
-					.owl__item.owl__item_img_2
-						.owl__content
-							.container
-								h2.owl__title Широкий выбор земельных участков под строительство складских и индустриальных объектов
-								a.button.button_lg(href="#") Смотреть предложения
-					.owl__item.owl__item_img_3
-						.owl__content
-							.container
-								h2.owl__title Свыше 40 предложений для проведения тендеров по выбору логистической компании
-								a.button.button_lg(href="#") Смотреть предложения
 			section.section.section_space
 				.container
 					h1.h2.h2_line Складская недвижимость
@@ -50,12 +27,6 @@ html(lang="ru")
 									option(value="2") Продажа склада
 									option(value="3") Built-to-Suit
 									option(value="4") Ответственное хранение
-								p.form-col__descr Тип комплекса
-								select.select.form-col__select
-									option(value) Не выбрано
-									option(value="5") Складской комплекс
-									option(value="6") Производственно-складской комплекс
-									option(value="7") Производственный комплекс
 								p.form-col__descr Направление
 								select.select.form-col__select
 									option(value) Не выбрано
@@ -63,29 +34,6 @@ html(lang="ru")
 									option(value="9") Север
 									option(value="10") Запад
 									option(value="11") Юг
-								p.form-col__descr Класс
-								select.select.form-col__select
-									option(value) Не выбрано
-									option(value="12") C-
-									option(value="13") A
-									option(value="14") C
-									option(value="15") B
-									option(value="16") B+
-									option(value="17") A-
-								p.form-col__descr Подходит для
-								select.select.form-col__select
-									option(value) Не выбрано
-									option(value="18") Вариант 1
-									option(value="19") Вариант 2
-
-							.col-xs-6.col-md-4.col-md-offset-2.section__xxs
-								p.form-col__descr Расстояние от КАД, км
-								select.select.form-col__select
-									option(value) Не выбрано
-									option(value="20") 0 - 10
-									option(value="21") 10 - 20
-									option(value="22") 20 - 50
-									option(value="23") 50 - 100
 								p.form-col__descr Площадь м
 									sup 2
 								select.select.form-col__select
@@ -93,6 +41,8 @@ html(lang="ru")
 									option(value="24") 1 000 - 2 000
 									option(value="25") 2 000 - 10 000
 									option(value="26") 10 000 - 20 000
+
+							.col-xs-6.col-md-4.col-md-offset-2.section__xxs
 								p.form-col__descr Арендная ставка руб./мес.
 								select.select.form-col__select
 									option(value) Не выбрано
@@ -107,12 +57,6 @@ html(lang="ru")
 									option(value="31") 500 000 - 700 000
 									option(value="32") 700 000 - 1 000 000
 						input.button.button_lg.form-col__btn(type="submit" value="Найти склады")
-			section.section
-				.map
-					.map__cont#map1
-					.container.map__inner
-						h2.h2.h2_line.map__title Объект на карте
-						a.button.button_lg.map__button(href="#") Поиск по параметрам
 			section.section
 				.container-fluid
 					.row.section__simple-flex
@@ -164,57 +108,12 @@ html(lang="ru")
 									p.colorless__letter А
 									p.colorless__more Узнать больше
 
-
-			section.section.section_space
-				.container
-					h2.h2.h2_line Похожие объекты
-
-				.container-fluid
-					.row.section__simple-flex-xxs
-
-						.col-xs-6.col-sm-3.section__xxs.colorless
-							a.colorless__text.colorless__text_full(href="#")
-								.colorless__text-img.colorless__text-img_img_1
-								.colorless__i
-									h4.colorless__title Gorigo
-									p.colorless__subtitle Логистический комплекс
-									p.colorless__address Россия, Санкт-Петербург Горелово, Волхонское шоссе
-									p.colorless__class Класс
-									p.colorless__letter А
-									p.colorless__more Узнать больше
-						.col-xs-6.col-sm-3.section__xxs.colorless
-							a.colorless__text.colorless__text_full(href="#")
-								.colorless__text-img.colorless__text-img_img_3
-								.colorless__i
-									h4.colorless__title АКМ Логистик 2
-									p.colorless__subtitle Логистический комплекс
-									p.colorless__address Россия, Санкт-Петербург Московское шоссе, 4 км
-									p.colorless__class Класс
-									p.colorless__letter А
-									p.colorless__more Узнать больше
-						.col-xs-6.col-sm-3.section__xxs.colorless
-							a.colorless__text.colorless__text_full(href="#")
-								.colorless__text-img.colorless__text-img_img_6
-								.colorless__i
-									h4.colorless__title Адастра
-									p.colorless__subtitle Логистический комплекс
-									p.colorless__address Россия, Санкт-Петербург Колтушское шоссе
-									p.colorless__class Класс
-									p.colorless__letter А
-									p.colorless__more Узнать больше
-						.col-xs-6.col-sm-3.section__xxs.colorless
-							a.colorless__text.colorless__text_full(href="#")
-								.colorless__text-img.colorless__text-img_img_8
-								.colorless__i
-									h4.colorless__title А Плюс Парк
-									p.colorless__subtitle Логистический комплекс
-									p.colorless__address Россия, Санкт-Петербург Шушары, Московское шоссе, 4 км
-									p.colorless__class Класс
-									p.colorless__letter А
-									p.colorless__more Узнать больше
-
-				.container
-					input.button.button_lg.section__space-top(type="button" value="Показать ещё")
+			section.section
+				.map
+					.map__cont#map1
+					.container.map__inner
+						h2.h2.h2_line.map__title Объект на карте
+						a.button.button_lg.map__button(href="#") Поиск по параметрам
 
 			section.section.section_space
 				.container

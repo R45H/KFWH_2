@@ -196,8 +196,29 @@
 		}
 	}
 
+	&__text {
+		display: block;
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $color-dark;
+		text-transform: uppercase;
+		margin: 0;
+
+		&_bright {
+			color: white;
+		}
+
+		&_space_bot {
+			margin-bottom: 1.5em;
+		}
+	}
+
 	&_space {
 		margin: 5em 0 3em;
+	}
+
+	&_space-bot {
+		margin-bottom: 3em;
 	}
 
 	&_pad {
@@ -210,5 +231,9 @@
 
 	&_light {
 		background-color: $color-lighter;
+	}
+	
+	&_gray {
+		background-color: $color-dark;
 	}
 }
