@@ -81,6 +81,10 @@
 		font-weight: 800;
 		transition: $duration ease;
 
+		@include screen-sm() {
+			min-height: 8em;
+		}
+
 		&::after {
 			@extend %line_red;
 			margin-top: 1em;

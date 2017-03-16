@@ -9,6 +9,11 @@
 	}
 
 	&__select {
+		width: 100%;
+
+		@include screen-xs() {
+			width: 20em;
+		}
 
 		+ .ui-selectmenu-button {
 			display: block;

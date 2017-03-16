@@ -1,5 +1,6 @@
-font.notetext {
-	display: none;
+.notetext {
+	display: block;
+	width: 100%;
 	color: $color-dark;
 	background-color: $color-lighter;
 	padding: 15px;
@@ -8,4 +9,17 @@ font.notetext {
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
+
+	@include screen-xs() {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&_space_bot {
+		margin-bottom: 1em;
+	}
+}
+
+font.notetext {
+	color: $color-dark;
 }

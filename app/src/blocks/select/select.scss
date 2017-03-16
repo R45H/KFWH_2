@@ -1,4 +1,11 @@
 .select {
+	outline: none;
+	padding: 6px 2.5em 6px 10px;
+	background-color: $color-lighter;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: $color-dark;
+	border: none;
 
 	&__current {
 		outline: none;
