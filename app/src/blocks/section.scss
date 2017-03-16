@@ -213,6 +213,16 @@
 		}
 	}
 
+	&__line {
+		margin-bottom: 20px;
+		margin-top: -10px;
+
+		@include screen-md() {
+			margin-bottom: .9em;
+			margin-top: 0;
+		}
+	}
+
 	&_space {
 		margin: 5em 0 3em;
 	}

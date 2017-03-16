@@ -1,0 +1,20 @@
+.line {
+	border-radius: 0;
+	height: 2.125em;
+	font-size: 1.6rem;
+	font-weight: bold;
+	background-color: $color-gray;
+
+	&__bar {
+		background-color: $color-main;
+		height: 2.125em;
+		font-size: 1.6rem;
+		text-align: right;
+	}
+
+	&__num {
+		margin-right: 10px;
+		line-height: 1.7em;
+		font-size: 2rem;
+	}
+}
