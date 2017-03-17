@@ -17,6 +17,17 @@
 
 	&_space_bot {
 		margin-bottom: 1em;
+
+		@include screen-xs() {
+			margin-bottom: 1em;
+		}
+	}
+
+	&_full {
+
+		@include screen-xs() {
+			width: 100%;
+		}
 	}
 }
 
