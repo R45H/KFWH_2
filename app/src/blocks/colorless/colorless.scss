@@ -46,7 +46,6 @@
 	&__text-img {
 		background: no-repeat 50% 50%;
 		background-size: cover;
-		filter: grayscale(100%);
 	}
 
 	&__img,
@@ -101,6 +100,16 @@
 
 			@include screen-xxs() {
 				width: 100%;
+			}
+
+			.colorless {
+
+				&__text-img {
+
+					&::before {
+						background-color: rgba(0, 0, 0, .3);
+					}
+				}
 			}
 		}
 
@@ -175,7 +184,7 @@
 		line-height: 1.2em;
 
 		&::after {
-			@extend %line_gray;
+			@extend %line;
 			margin-top: .7em;
 			transition: $duration ease;
 		}
@@ -188,7 +197,7 @@
 	&__class {
 		font-size: 1.7rem;
 		font-weight: 500;
-		color: $color-light;
+		color: white;
 		margin: 0;
 		transition: $duration ease;
 	}
@@ -196,7 +205,7 @@
 	&__letter {
 		font-size: 5.9rem;
 		font-weight: 800;
-		color: $color-light;
+		color: white;
 		line-height: 1em;
 		margin: 0 0 .3em;
 		transition: $duration ease;
