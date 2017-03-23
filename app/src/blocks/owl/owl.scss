@@ -48,11 +48,13 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 2em;
-		bottom: 0;
+		top: 50%;
+		transform: translateY(-50%);
 
 		@include screen-sm() {
 			top: 5em;
+			bottom: 0;
+			transform: none;
 		}
 	}
 

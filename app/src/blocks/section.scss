@@ -64,9 +64,16 @@
 
 	&__simple-flex-xxs {
 
-		@include screen-xs() {
+		@include screen-xxs() {
 			display: flex;
 			flex-wrap: wrap;
+		}
+	}
+
+	&__simple-flex-center {
+
+		@include screen-xxs() {
+			justify-content: center;
 		}
 	}
 
