@@ -65,6 +65,17 @@
 		left: 15px;
 		pointer-events: auto;
 	}
+
+	&__colorless {
+
+		.colorless {
+			//=====
+
+			&__title {
+				padding-right: 47px;
+			}
+		}
+	}
 }
 
 .gm-style-iw {
@@ -79,8 +90,8 @@
 	height: 32px;
 	width: 32px;
 	position: absolute;
-	right: 30px;
-	top: 30px;
+	right: 15px;
+	top: 15px;
 	z-index: 1;
 	cursor: pointer;
 	transition: $duration ease;

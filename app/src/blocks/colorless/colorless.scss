@@ -3,6 +3,7 @@
 	text-align: left;
 	text-decoration: none;
 	display: block;
+	font-family: $font-main;
 
 	@include screen-xxs() {
 		display: flex;
