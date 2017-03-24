@@ -22,15 +22,15 @@
 
 		@include screen-sm(){
 			margin: 0 1em 0 0;
-			max-width: 65%;
+			max-width: 85px;
 		}
 
 		@include screen-md(){
-			max-width: 80%;
+			max-width: 105px;
 		}
 
 		@include screen-lg(){
-			max-width: 100%;
+			max-width: 123px;
 		}
 	}
 
