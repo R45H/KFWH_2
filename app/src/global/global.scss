@@ -44,7 +44,8 @@ textarea {
 }
 
 ::selection {
-
+	background-color: $color-dark;
+	color: white;
 }
 
 a {
