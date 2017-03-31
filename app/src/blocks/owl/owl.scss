@@ -23,6 +23,13 @@
 			@extend %fog;
 		}
 
+		&_no_fog {
+
+			&::before {
+				display: none;
+			}
+		}
+
 		&_img_1 {
 			background-image: url($path + 'img/slide-1.jpg');
 		}
