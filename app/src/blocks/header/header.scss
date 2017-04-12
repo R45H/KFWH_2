@@ -8,6 +8,11 @@
 		height: $top-height;
 		position: fixed;
 		width: 100%;
+		transform: translate3d(0, 0, 0);
+	}
+
+	@include screen-xs(max) {
+		min-height: 123px;
 	}
 
 	&__logo {
