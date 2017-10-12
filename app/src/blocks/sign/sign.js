@@ -23,4 +23,17 @@ sign.on('hidden.bs.modal', function() { // При закрытии модалк�
 	;
 	$header.css('padding-right', '0');
 });
+
+/* Чекбокс, который блокирует кнопку "Отправить" */
+sign.each(function() {
+	var
+		$this = $(this),
+		$check = $this.find('input[type="checkbox"][data-check]'),
+		$btn = $this.find('input[type="submit"][data-check]');
+
+	$check.on('change', function() {
+		$btn.toggleClass('button_inactive');
+	});
+});
+/* ===== */
 /* ========== */

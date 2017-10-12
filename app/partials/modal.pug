@@ -1,4 +1,4 @@
-.modal.fade.sign
+#sign.modal.fade.sign
 	.modal-dialog.sign__wrap
 		.sign__header
 			.sign__close(data-dismiss="modal")
@@ -11,3 +11,28 @@
 				input.input.input_light.form__input(type="email" placeholder="Почта")
 				textarea.input.input_light.form__input(rows="5" placeholder="Сообщение")
 				input.button.button_lg.button_wide(type="submit" value="Оставить заявку")
+
+#subscribe.modal.fade.sign
+	.modal-dialog.sign__wrap
+		.sign__header
+			.sign__close(data-dismiss="modal")
+			p.sign__descr Подписаться на рассылку
+		.sign__body
+			form.form.sign__form
+				input.input.input_light.form__input(type="text" placeholder="Имя")
+				input.input.input_light.form__input(type="email" placeholder="Почта")
+				p.sign__descr.sign__descr_bot Какие письма Вы предпочитаете получать?
+
+				.check
+					input#modalRadio1.check__input(type='checkbox' name='news' value='news')
+					label.check__label(for='modalRadio1') новости и аналитика
+
+				.check
+					input#modalRadio2.check__input(type='checkbox' name='offers' value='offers')
+					label.check__label(for='modalRadio2') новинки и предложения
+
+				input.button.button_lg.button_wide.button_inactive.sign__btn(type="submit" value="Подписаться на рассылку" data-check="check-1")
+
+				.check
+					input#modalRadio3.check__input(type="checkbox" name="agree" value="agree" data-check="check-1")
+					label.check__label(for='modalRadio3') Я согласен на обработку персональных данных

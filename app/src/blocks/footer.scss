@@ -87,4 +87,12 @@
 			}
 		}
 	}
+
+	&__btn {
+		margin-bottom: 10px;
+
+		@include screen-sm() {
+			width: 100%;
+		}
+	}
 }

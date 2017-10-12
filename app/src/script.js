@@ -12,4 +12,5 @@ $(function() {
 	@@include('blocks/article/article.js')
 	@@include('blocks/compare/compare.js')
 	@@include('blocks/input/input.js')
+	@@include('blocks/button/button.js')
 });

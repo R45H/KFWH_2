@@ -1,0 +1,45 @@
+.check {
+	display: block;
+
+	&__input {
+		display: none;
+
+		&:checked {
+
+			+ .check__label {
+
+				&::after {
+					content: '\f046';
+				}
+			}
+		}
+	}
+
+	&__label {
+		position: relative;
+		padding: .3em 0 .3em 2em;
+		font-weight: 300;
+		cursor: pointer;
+		transition: $duration / 2 ease;
+		margin: 0;
+		font-size: 1.5rem;
+
+		&::after {
+			content: '\f096';
+			font-family: $font-fa;
+			line-height: 1;
+			position: absolute;
+			top: .45em;
+			left: 0;
+			font-size: 1.8rem;
+		}
+
+		&:hover {
+			color: $color-main;
+
+			&::after {
+
+			}
+		}
+	}
+}

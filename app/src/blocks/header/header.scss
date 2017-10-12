@@ -1,5 +1,5 @@
 .header {
-	padding: 1.5em 0;
+	padding: .7em 0;
 	background-color: white;
 	z-index: 10;
 	box-shadow: 0 0 5px $color-gray;
@@ -12,7 +12,7 @@
 	}
 
 	@include screen-xs(max) {
-		min-height: 123px;
+		min-height: 134px;
 	}
 
 	&__logo {
@@ -73,17 +73,9 @@
 
 	&__col {
 		font-size: 1.1rem;
-
-		&_upper {
-
-			@include screen-xs() {
-				margin-top: -1em;
-			}
-
-			@include screen-md() {
-				margin-top: 7px;
-			}
-		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__lang {
@@ -100,7 +92,18 @@
 		@include screen-lg() {
 			position: absolute;
 			right: -50px;
-			top: 0;
+			top: .7em;
+		}
+	}
+
+	&__btn {
+		font-size: 1.2rem;
+		display: block;
+		padding: 7px;
+		margin-top: 2px;
+
+		@include screen-sm() {
+			font-size: 1rem;
 		}
 	}
 }

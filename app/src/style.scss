@@ -3,6 +3,7 @@
 @import url('global/fonts.scss'); // Шрифты
 
 @import url('blocks/logo.scss'); // Лого
+@import url('blocks/button/button.scss'); // Стандартная кнопка
 @import url('blocks/header/header.scss'); // Шапка
 @import url('blocks/main.scss'); // Контейнер контента
 @import url('blocks/menu.scss'); // Меню
@@ -12,7 +13,6 @@
 @import url('blocks/lang.scss'); // Блок выбора языка
 @import url('blocks/form.scss'); // Стандартная форма
 @import url('blocks/input/input.scss'); // Стандартный инпут
-@import url('blocks/button.scss'); // Стандартная кнопка
 @import url('blocks/copyright.scss'); // Копирайт
 @import url('blocks/simple-list.scss'); // Обычный список
 @import url('blocks/soc.scss'); // Социальные иконки
@@ -46,5 +46,6 @@
 @import url('blocks/notetext.scss'); // Информационное окошко
 @import url('blocks/line.scss'); // Линия рейтинга
 @import url('blocks/news-logo.scss'); // Шапка новости
+@import url('blocks/check.scss'); // Чекбоксы
 
 @import url('blocks/sign/sign.scss'); // Модальное окно
